@@ -1,0 +1,91 @@
+$grid-columns: 10
+
+@import bootstrap.scss
+
+$white: #fff
+$turquoise: #1abc9c
+$turquoiseDark: #16a085
+$green: #2ecc71
+$greenDark: #27ae60
+$blue: #3498db
+$blueDark: #2980b9
+$purple: #9b59b6
+$purpleDark: #8e44ad
+$navy: #34495e
+$navyDark: #2c3e50
+$yellow: #f1c40f
+$yellowDark: #f39c12
+$orange: #e67e22
+$orangeDark: #d35400
+$red: #e74c3c
+$redDark: #c0392b
+$clouds: #ecf0f1
+$cloudsDark: #bdc3c7
+$concrete: #95a5a6
+$concreteDark: #7f8c8d
+
+
+header
+	height: 50px
+	@media (min-width: $screen-sm)
+		padding: 0 30px
+	@media (min-width: $screen-md)
+		padding: 0 70px
+	// +gradient-vertical($orangeDark, lighten($orangeDark, 10%))
+	p.site-logo
+		// color: $white
+
+.banner
+	background: $gray-light
+	.banner-inner
+		padding: 30px 0
+		@media (min-width: $screen-sm)
+			padding: 40px 30px
+		@media (min-width: $screen-md)
+			padding: 70px 120px
+	h1
+		margin: 0
+		font-weight: normal
+	p
+		margin: 30px 0 0
+		// color: $white
+
+
+// sections
+.stream
+	@media (min-width: $screen-sm)
+		padding: 0 70px
+	@media (min-width: $screen-md)
+		padding: 0 150px
+	// stream title
+	p.issue-title
+		margin: 30px 0 0
+		span.issue-num-date
+			text-align: center
+		span.issue-title
+			font-size: 28px
+			font-weight: bold
+	
+	.issue-commentary
+		margin-top: 30px
+		span.issue-commentary-meta
+			text-align: center
+			span.headshot
+				display: block
+				background: blue
+				width: 30px
+				height: 30px
+	
+	section
+		// section title
+		h3
+			text-align: center
+
+		// individual articles
+		article
+			span
+				text-align: right
+			h4
+				margin-top: 0
+			p
+			a
