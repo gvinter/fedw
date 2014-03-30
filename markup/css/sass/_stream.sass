@@ -14,14 +14,27 @@
 			text-transform: uppercase
 			line-height: 16px
 			margin-top: 10px
+			@media (max-width: $screen-sm)
+				margin: 0 0 30px
+				font-size: 16px
+				line-height: 20px
 		span.issue-title
 			font-size: 23px
 			font-weight: normal
 			font-family: $font-roboto
-
+			+mq($to: $screen-xs)
+				padding: 0 30px
+				font-size: 19px
+				line-height: 23px
+			+mq($from: $screen-xs, $to: $screen-sm)
+				padding: 0 90px
 	
 	.issue-commentary
 		margin-top: 20px
+		+mq($to: $screen-xs)
+			padding: 0 10px
+		+mq($from: $screen-xs, $to: $screen-sm)
+			padding: 0 90px
 		span.issue-commentary-meta
 			text-align: center
 			span.headshot
@@ -48,12 +61,12 @@
 				padding-bottom: 10px
 				text-transform: uppercase
 				font-weight: 700
+				font-family: $font-roboto
 
 			// section colors
 			&.news
 				h3, article a
-					color: $orangeDark
-					font-family: $font-roboto
+					color: $orange
 
 			&.frameworks
 				h3, article a
@@ -61,7 +74,7 @@
 
 			&.tutorials
 				h3, article a
-					color: $navyDark
+					color: lighten($navyDark, 20%)
 
 			&.dev-tools
 				h3, article a
