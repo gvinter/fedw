@@ -1,0 +1,119 @@
+h1, h2, h3, h4
+	strong
+		font-family: $font-roboto
+h1
+	font-size: 18px
+h2
+	font-size: 16px
+h3
+	font-size: 16px
+h4
+	font-size: 16px
+
++mq($from: $screen-sm)
+	h1
+		font-size: 20px
+	h2
+		font-size: 18px
+	h3
+		font-size: 16px
+	h4
+		font-size: 16px
+
++mq($from: $screen-md)
+	h1
+		font-size: 26px
+	h2
+		font-size: 22px
+	h3
+		font-size: 20px
+	h4
+		font-size: 18px
+
+
+.banner
+	background: $blue
+	+gradient-radial(lighten($blue, 5%), $blue)
+	color: $white
+	.banner-inner
+		padding: 30px 0
+		@media (min-width: $screen-sm)
+			padding: 40px 30px
+		@media (min-width: $screen-md)
+			padding: 50px 120px
+	h1
+		margin: 0
+		font-weight: 300
+		line-height: 38px
+		span
+			float: left
+			clear: both
+			&.end-of-title
+				float: right
+		strong
+			text-align: center
+			float: left
+			width: 100%
+			font-size: 33px
+			color: $yellow
+	p.subtitle
+		padding-top: 20px
+		text-align: center
+		clear: both
+		font-size: 16px
+		font-weight: 300
+		letter-spacing: 1px
+		margin: 0
+		span
+			display: block
+
+	// Banner Signup
+	.banner-signup
+		background: $blueDark
+		background: rgba(41, 128, 185, 0.6)
+		.form-inline
+			text-align: center
+			padding: 20px 0
+		.btn-success
+			padding-left: 32px
+			padding-right: 32px
+			margin-top: 10px
+		+mq($from: $screen-xs)
+			input[type="email"]
+				width: 250px
+				display: inline
+			.btn-success
+				margin-top: 0
+
+	// Banner Nav
+	.banner-menu
+		background: $white
+		ul
+			padding: 20px 0 0
+			text-align: center
+			li
+				padding: 10px 0
+				+mq($from: $screen-xs)
+					display: inline
+					padding: 0 25px
+
+
+		// mailchimp
+		.mce-error-response, .mce-success-response
+			text-align: center
+			margin: 10px auto 0
+			+mq($from: $screen-xs)
+				width: 70%
+			+mq($from: $screen-sm)
+				width: 50%
+		.mce-error-response, .mce_inline_error
+			color: darken($red, 5%)
+		.mce-success-response
+			color: lighten($green, 20%)
+		
+		div.mce_inline_error
+			// display: inline
+			// margin-left: -240px
+			// margin-top: 7px
+			position: absolute
+			

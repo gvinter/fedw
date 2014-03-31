@@ -1,0 +1,95 @@
+// sections
+.stream
+	@media (min-width: $screen-sm)
+		padding: 0 70px
+	@media (min-width: $screen-md)
+		padding: 0 150px
+	// stream title
+	h2.issue-title
+		margin: 40px 0 0
+		span.issue-num-date
+			text-align: center
+			font-size: 12px
+			font-weight: normal
+			text-transform: uppercase
+			line-height: 16px
+			margin-top: 10px
+			@media (max-width: $screen-sm)
+				margin: 0 0 30px
+				font-size: 16px
+				line-height: 20px
+		span.issue-title
+			font-size: 23px
+			font-weight: normal
+			font-family: $font-roboto
+			+mq($to: $screen-xs)
+				font-size: 19px
+				line-height: 23px
+			+mq($from: $screen-xs, $to: $screen-sm)
+				padding: 0 50px
+	
+	.issue-commentary
+		margin-top: 20px
+		// +mq($to: $screen-xs)
+		// 	padding: 0 10px
+		// +mq($from: $screen-xs, $to: $screen-sm)
+		// 	padding: 0 90px
+		.issue-commentary-meta
+			text-align: center
+			+mq($to: $screen-xs)
+				display: none
+			span.headshot
+				display: block
+				width: 80px
+				height: 80px
+				overflow: hidden
+				margin: 0 auto
+				+border-radius(99px)
+		
+		p
+			border-left: 2px solid $blueDark
+			padding-top: 4px
+			padding-bottom: 5px
+			+mq($to: $screen-xs)
+				width: 90%
+				margin-left: 20px
+			
+	.stream-sections
+		section
+			margin-top: 40px
+			// section title
+			h3
+				text-align: center
+				width: 50%
+				margin: 0 auto 30px auto
+				border-bottom: 1px solid
+				padding-bottom: 10px
+				text-transform: uppercase
+				font-weight: 700
+				font-family: $font-roboto
+
+			// section colors
+			&.news
+				h3, article a
+					color: $orange
+
+			&.frameworks
+				h3, article a
+					color: $redDark
+
+			&.tutorials
+				h3, article a
+					color: lighten($navyDark, 20%)
+
+			&.dev-tools
+				h3, article a
+					color: $greenDark
+			
+			// individual articles
+			article
+				margin-top: 30px
+				h4
+					margin-top: 0
+					font-weight: 600
+				p
+				a

@@ -1,0 +1,23 @@
+header
+	height: 50px
+	padding-top: 10px
+	@media (min-width: $screen-sm)
+		padding-left: 30px
+		padding-right: 30px
+	@media (min-width: $screen-md)
+		padding-left: 70px
+		padding-right: 70px
+	p.site-logo
+		color: $gray-light
+		text-align: center
+		text-transform: uppercase
+		font-weight: 700
+		span
+			color: $gray-darker
+			font-weight: 600
+			font-size: 17px
+			text-transform: initial
+			&:before
+				content: '{ '
+			&:after
+				content: ' }'
