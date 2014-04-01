@@ -60,29 +60,39 @@
 			// section title
 			h3
 				text-align: center
-				width: 50%
 				margin: 0 auto 30px auto
-				border-bottom: 1px solid
-				padding-bottom: 10px
+				padding: 10px 0
 				text-transform: uppercase
 				font-weight: 700
 				font-family: $font-roboto
-
+				color: $white
+				+mq($from: $screen-sm)
+					width: 50%
+			article a
+				font-weight: bold
 			// section colors
 			&.news
-				h3, article a
+				h3
+					background-color: $orange
+				article a
 					color: $orange
-
+			
 			&.frameworks
-				h3, article a
+				h3
+					background-color: $redDark
+				article a
 					color: $redDark
 
 			&.tutorials
-				h3, article a
+				h3
+					background-color: lighten($navyDark, 20%)
+				article a
 					color: lighten($navyDark, 20%)
 
 			&.dev-tools
-				h3, article a
+				h3
+					background-color: $greenDark
+				article a
 					color: $greenDark
 			
 			// individual articles
