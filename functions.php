@@ -43,6 +43,7 @@ function add_to_twig($twig){
 	/* this is where you can add your own fuctions to twig */
 	$twig->addExtension(new Twig_Extension_StringLoader());
 	$twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
+	$twig->addFilter('translate_section_title', new Twig_Filter_Function('translate_section_title'));
 	// $twig->addFilter('theme_options', get_option('theme_options'));
 	return $twig;
 }
@@ -99,19 +100,45 @@ function create_issue_post_type() {
 
 // Adds a box to the main column on the Post and Page edit screens.
 function myplugin_add_custom_box() {
-  add_meta_box('myplugin_sectionid', "Issue Number", 'myplugin_inner_custom_box', 'issue', 'side');
+  add_meta_box('myplugin_sectionid', "Issue Number", 'issue_number_to_issue', 'issue', 'side');
+  add_meta_box('myplugin_sectionid', "Issue Section", 'custom_post_meta', 'post', 'side', 'high');
 }
 add_action( 'add_meta_boxes', 'myplugin_add_custom_box' );
 
-function myplugin_inner_custom_box( $post ) {
-  wp_nonce_field( 'myplugin_inner_custom_box', 'myplugin_inner_custom_box_nonce' );
+function issue_number_to_issue( $post ) {
+  wp_nonce_field( 'issue_number_to_issue', 'issue_number_to_issue_nonce' );
 
   // Use get_post_meta() to retrieve an existing value from the database and use the value for the form.
   $value = get_post_meta( $post->ID, 'issue_number', true );
 
   echo '<label for="issue_number">Just put a numeric value here. If Issue #1, put "1".</label>';
   echo '<input type="text" id="issue_number" name="issue_number" value="' . esc_attr( $value ) . '" size="25" />';
+}
 
+function custom_post_meta( $post ) {
+  wp_nonce_field( 'custom_post_meta', 'issue_section_to_post_nonce' );
+
+  // Use get_post_meta() to retrieve an existing value from the database and use the value for the form.
+  $issue_section = get_post_meta( $post->ID, 'issue_section', true );
+  $article_link = get_post_meta( $post->ID, 'article_link', true );
+  $article_title = get_post_meta( $post->ID, 'article_title', true );
+  $article_author = get_post_meta( $post->ID, 'article_author', true );
+
+  // Issue Section
+  echo '<label for="issue_section">Issue Section (ie. "Dev Tools", "Frameworks", etc.)</label>';
+  echo '<input type="text" id="issue_section" name="issue_section" value="' . esc_attr( $issue_section ) . '" size="25" />';
+
+  // Article Link
+  echo '<label for="article_link">Article Link</label>';
+  echo '<input type="text" id="article_link" name="article_link" value="' . esc_attr( $article_link ) . '" size="25" />';
+
+	// Article Title
+  echo '<label for="article_title">Article Title</label>';
+  echo '<input type="text" id="article_title" name="article_title" value="' . esc_attr( $article_title ) . '" size="25" />';
+  
+  // Article Author
+  echo '<label for="article_author">Article Author</label>';
+  echo '<input type="text" id="article_author" name="article_author" value="' . esc_attr( $article_author ) . '" size="25" />';
 }
 
 // When the post is saved, saves our custom data.
@@ -121,38 +148,46 @@ function myplugin_save_postdata( $post_id ) {
   // because save_post can be triggered at other times.
   
   // Check if our nonce is set.
-  if ( ! isset( $_POST['myplugin_inner_custom_box_nonce'] ) )
-    return $post_id;
+  // if ( ! isset( $_POST['myplugin_inner_custom_box_nonce'] ) )
+  //   return $post_id;
 
-  $nonce = $_POST['myplugin_inner_custom_box_nonce'];
+  // $nonce = $_POST['myplugin_inner_custom_box_nonce'];
 
-  // Verify that the nonce is valid.
-  if ( ! wp_verify_nonce( $nonce, 'myplugin_inner_custom_box' ) )
-      return $post_id;
+  // // Verify that the nonce is valid.
+  // if ( ! wp_verify_nonce( $nonce, 'myplugin_inner_custom_box' ) )
+  //     return $post_id;
 
-  // If this is an autosave, our form has not been submitted, so we don't want to do anything.
-  if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
-      return $post_id;
+  // // If this is an autosave, our form has not been submitted, so we don't want to do anything.
+  // if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+  //     return $post_id;
 
-  // Check the user's permissions.
-  if ( 'issue' == $_POST['post_type'] ) {
+  // // Check the user's permissions.
+  // if ( 'issue' == $_POST['post_type'] ) {
 
-    if ( ! current_user_can( 'edit_page', $post_id ) )
-        return $post_id;
+  //   if ( ! current_user_can( 'edit_page', $post_id ) )
+  //       return $post_id;
   
-  } else {
+  // } else {
 
-    if ( ! current_user_can( 'edit_post', $post_id ) )
-        return $post_id;
-  }
+  //   if ( ! current_user_can( 'edit_post', $post_id ) )
+  //       return $post_id;
+  // }
 
   /* OK, its safe for us to save the data now. */
 
   // Sanitize user input.
-  $mydata = sanitize_text_field( $_POST['issue_number'] );
+  $issue_number = sanitize_text_field( $_POST['issue_number'] );
+  $issue_section = sanitize_text_field( $_POST['issue_section'] );
+  $article_link = sanitize_text_field( $_POST['article_link'] );
+  $article_title = sanitize_text_field( $_POST['article_title'] );
+  $article_author = sanitize_text_field( $_POST['article_author'] );
 
   // Update the meta field in the database.
-  update_post_meta( $post_id, 'issue_number', $mydata );
+  update_post_meta( $post_id, 'issue_number', $issue_number );
+  update_post_meta( $post_id, 'issue_section', $issue_section );
+  update_post_meta( $post_id, 'article_link', $article_link );
+  update_post_meta( $post_id, 'article_title', $article_title );
+  update_post_meta( $post_id, 'article_author', $article_author );
 }
 add_action( 'save_post', 'myplugin_save_postdata' );
 
@@ -234,3 +269,71 @@ function twitterurl() {
 }
 add_action('admin_menu', 'theme_options_page');
 function theme_options_page() {  add_options_page('Theme Settings', 'Theme Settings', 'administrator', __FILE__, 'build_options_page');}
+
+
+
+function sort_posts_by_category($posts) {
+
+	$sorted_posts = array(
+		'news' => array(),
+		'frameworks' => array(),
+		'dev-tools' => array(),
+		'inspiration' => array(),
+		'tutorials' => array(),
+		'other' => array()
+	);
+	
+	foreach ($posts as $post) {
+		
+		switch ($post->issue_section) {
+			case 'News':
+				array_push($sorted_posts['news'], $post);
+				break;
+			
+			case 'Frameworks':
+				array_push($sorted_posts['frameworks'], $post);
+				break;
+			
+			case 'Dev Tools':
+				array_push($sorted_posts['dev-tools'], $post);
+				break;
+			
+			case 'Inspiration':
+				array_push($sorted_posts['inspiration'], $post);
+				break;
+			
+			case 'Tutorials':
+				array_push($sorted_posts['tutorials'], $post);
+				break;
+
+			default:
+				array_push($sorted_posts['other'], $post);
+				break;
+		}
+	}
+	
+	return $sorted_posts;
+}
+
+function translate_section_title($id) {
+
+	switch ($id) {
+		case 'news':
+			return 'News';
+
+		case 'frameworks':
+			return 'Frameworks';
+			
+		case 'dev-tools':
+			return 'Dev Tools';
+		
+		case 'inspiration':
+			return 'Inspiration';
+		
+		case 'tutorials':
+			return 'Tutorials';
+
+		default:
+			return 'Other';
+	}
+}

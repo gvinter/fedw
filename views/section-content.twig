@@ -1,0 +1,9 @@
+<section class="col-lg-10 {{key}}">
+
+  <h3>{{key|translate_section_title}}</h3>
+
+  {% for post in section %}
+		{% include ['post-content.twig'] %}
+  {% endfor %}
+
+</section>
