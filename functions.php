@@ -219,18 +219,23 @@ function register_and_build_fields() {
 	function section_homepage() {}
 	function section_footer() {}
 	
+
+	add_settings_field('home_headline', 'Home Headline', 'home_headline', __FILE__, 'homepage_settings');
+	add_settings_field('home_sub_headline', 'Home Sub Headline', 'home_sub_headline', __FILE__, 'homepage_settings');
+	add_settings_field('home_no_issues_title', 'Home No Issues Title', 'home_no_issues_title', __FILE__, 'homepage_settings');
+	add_settings_field('home_no_issues_text', 'Home No Issues Text', 'home_no_issues_text', __FILE__, 'homepage_settings');
 	// add_settings_field('home_page_issue_number', 'Issue # to show on Home Page', 'home_page_issue_number', __FILE__, 'homepage_settings');
 	
 	// not using yet
-	add_settings_field('button1link', 'Button 1 URL', 'button1link_setting', __FILE__, 'homepage_settings');
-	add_settings_field('button2text', 'Button 2 Text', 'button2text_setting', __FILE__, 'homepage_settings');
-	add_settings_field('button2link', 'Button 2 URL', 'button2link_setting', __FILE__, 'homepage_settings');
-	add_settings_field('button3text', 'Button 3 Text', 'button3text_setting', __FILE__, 'homepage_settings');
-	add_settings_field('button3link', 'Button 3 URL', 'button3link_setting', __FILE__, 'homepage_settings');
-	add_settings_field('phonenumber', 'Phone Number', 'phonenumber', __FILE__, 'footer_settings');
-	add_settings_field('facebookurl', 'Facebook URL', 'facebookurl', __FILE__, 'footer_settings');
-	add_settings_field('googleurl', 'Google+ URL', 'googleurl', __FILE__, 'footer_settings');
-	add_settings_field('twitterurl', 'Twitter URL', 'twitterurl', __FILE__, 'footer_settings');
+	
+	// add_settings_field('button2text', 'Button 2 Text', 'button2text_setting', __FILE__, 'homepage_settings');
+	// add_settings_field('button2link', 'Button 2 URL', 'button2link_setting', __FILE__, 'homepage_settings');
+	// add_settings_field('button3text', 'Button 3 Text', 'button3text_setting', __FILE__, 'homepage_settings');
+	// add_settings_field('button3link', 'Button 3 URL', 'button3link_setting', __FILE__, 'homepage_settings');
+	// add_settings_field('phonenumber', 'Phone Number', 'phonenumber', __FILE__, 'footer_settings');
+	// add_settings_field('facebookurl', 'Facebook URL', 'facebookurl', __FILE__, 'footer_settings');
+	// add_settings_field('googleurl', 'Google+ URL', 'googleurl', __FILE__, 'footer_settings');
+	// add_settings_field('twitterurl', 'Twitter URL', 'twitterurl', __FILE__, 'footer_settings');
 }
 function validate_setting($theme_options) {
 	return $theme_options;
@@ -239,13 +244,21 @@ function validate_setting($theme_options) {
 // 	$options = get_option('theme_options');  echo "<input name='theme_options[home_page_issue_number]' type='text' value='{$options['home_page_issue_number']}' />";
 // }
 
+function home_headline() {
+	$options = get_option('theme_options');  echo "<input name='theme_options[home_headline]' type='text' value='{$options['home_headline']}' />";
+}
+function home_sub_headline() {
+	$options = get_option('theme_options');  echo "<input name='theme_options[home_sub_headline]' type='text' value='{$options['home_sub_headline']}' />";
+}
+function home_no_issues_text() {
+	$options = get_option('theme_options');  echo "<input name='theme_options[home_no_issues_text]' type='text' value='{$options['home_no_issues_text']}' />";
+}
+function home_no_issues_title() {
+	$options = get_option('theme_options');  echo "<input name='theme_options[home_no_issues_title]' type='text' value='{$options['home_no_issues_title']}' />";
+}
+
+
 // not using yet
-function button1link_setting() {
-	$options = get_option('theme_options');  echo "<input name='theme_options[button1link_setting]' type='text' value='{$options['button1link_setting']}' />";
-}
-function button2text_setting() {
-	$options = get_option('theme_options');  echo "<input name='theme_options[button2text_setting]' type='text' value='{$options['button2text_setting']}' />";
-}
 function button2link_setting() {
 	$options = get_option('theme_options');  echo "<input name='theme_options[button2link_setting]' type='text' value='{$options['button2link_setting']}' />";
 }

@@ -6,8 +6,8 @@
   <div class="banner">
     <div class="container">
       <div class="banner-inner">
-        <h1 class="title"><span>Hand picked</span> <strong>front-end developer news, tools and inspiration</strong> <span class="end-of-title">each week.</span></h1>
-        <p class="subtitle"><span>Vital content for front-end web developers that will keep you current.</span> Emailed to you each week, free.</p>
+        <h1 class="title">{{theme_options.home_headline}}</h1>
+        <p class="subtitle">{{theme_options.home_sub_headline}}</p>
       </div>
     </div>
     <div class="banner-signup">
@@ -65,7 +65,7 @@
       <div class="stream">
         
           <div class="row">
-            <h2 class="issue-title"><span class="issue-num-date col-sm-2 col-xs-10">Issue 1 <br /> Coming Soon</span> <span class="issue-title col-sm-8 col-xs-10">My name is Galen and I'm a front-end developer. <br />I'd like to share my resources with you.</span></h2>
+            <h2 class="issue-title"><span class="issue-num-date col-sm-2 col-xs-10">Issue 1 <br /> Coming Soon</span> <span class="issue-title col-sm-8 col-xs-10">{{theme_options.home_no_issues_title}}</span></h2>
           </div>
 
           <div class="row issue-commentary">
@@ -77,9 +77,7 @@
               </span>
             </div>
             <div class="col-xs-8 commentary">
-              <p>Like with any profession, staying current on industry news, trends and tools is time consuming. With web technologies evolving so quickly, being a web developer is even more difficult.</p>
-              <p>This newsletter is a weekly road map to all the most important resources for you, as a web developer. <strong>You'll be kept up trends and tools for keeping your skills sharp and your industry-talk fresh.</strong></p>
-              <p>Don't ever be in an interview or a conversation again with other developers when someone mentions something you didn't know about.</p>
+              {{theme_options.home_no_issues_text}}
             </div>
           </div>
 

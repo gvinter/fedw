@@ -14,7 +14,9 @@ if (!class_exists('Timber')){
 }
 $context = Timber::get_context();
 
-// error_log(var_export($context, true));
+// echo "<pre>";
+// print_r($context);
+// echo "</pre>";
 
 $issue_args = array(
 	'post_type' => 'issue',
