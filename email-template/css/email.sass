@@ -1,3 +1,9 @@
+$gray-darker: lighten(#000, 13.5%) // #222
+$gray-dark: lighten(#000, 20%)  // #333
+$gray: lighten(#000, 33.5%) // #555
+$gray-light: lighten(#000, 60%)   // #999
+$gray-lighter: lighten(#000, 93.5%) // #eee
+
 $white: #fff
 $turquoise: #1abc9c
 $turquoiseDark: #16a085
@@ -39,6 +45,7 @@ body
   -webkit-text-size-adjust: none
   width: 100%!important
   height: 100%
+  background: $white
 
 // ELEMENTS
 
@@ -201,11 +208,36 @@ h3.issue-title
   font-weight: 600
   text-transform: uppercase
 
-.frameworks-title
-  background: $purple
-.frameworks-link a
-  color: $purple
+.news-title
+  background: $orange
+.news-link a
+  color: $orange
   font-weight: 600
+
+.tutorials-title
+  background: lighten($navyDark, 20%)
+.tutorials-link a
+  color: lighten($navyDark, 20%)
+  font-weight: 600
+
+.frameworks-title
+  background: $redDark
+.frameworks-link a
+  color: $redDark
+  font-weight: 600
+
+.dev-tools-title
+  background: $greenDark
+.dev-tools-link a
+  color: $greenDark
+  font-weight: 600
+
+.other-title
+  background: $purpleDark
+.other-link a
+  color: $purpleDark
+  font-weight: 600
+
 
 p.article-title
   font-size: 16px
@@ -247,6 +279,14 @@ ul
         h1, h2, h3, h4, h5, h6, p
           margin-bottom: 0!important
 
+.explanation
+  color: $gray
+  font-size: 13px
+  line-height: 16px
+  a
+    color: $gray
+    text-decoration: none
+
 // RESPONSIVENESS
 
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something
@@ -286,10 +326,12 @@ ul
 .column table
   width: 100%
 
-.social .column
-  width: 280px
-  min-width: 279px
-  float: left
+.social
+  margin-top: 30px
+  .column
+    width: 280px
+    min-width: 279px
+    float: left
 
 /* Be sure to place a .clear element after each set of columns, just to be safe
 

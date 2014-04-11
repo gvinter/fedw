@@ -3,18 +3,18 @@
 {# {{issue|print_r}} #}
 {# </pre> #}
   <div class="row">
-    <h2 class="issue-title"><span class="issue-num-date col-sm-2 col-xs-10">Issue {{issue.issue_number}} <br/> {{ issue.post_date|date('F j, Y') }}</span> <span class="issue-title col-sm-8 col-xs-10">{{issue.post_title}}</span></h2>
+    <h2 class="issue-title"><span class="issue-num-date col-sm-2 col-xs-10">Issue {{post.issue_number}} <br/> {{ post.post_date|date('F j, Y') }}</span> <span class="issue-title col-sm-8 col-xs-10">{{post.post_title}}</span></h2>
   </div>
 
   <div class="row issue-commentary">
     <div class="issue-commentary-meta col-xs-2">
-      <span class="headshot"><img src="wp-content/themes/fedw/img/galen.jpg"></span>
+      <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg"></span>
       <span class="galen">
-        Galen Vinter
+        Galen Vinter 
         <a href="http://twitter.com/gvinter">@gvinter</a>
       </span>
     </div>
-    <div class="col-xs-8 commentary">{{issue.post_content|wpautop}}</div>
+    <div class="col-xs-8 commentary">{{post.post_content|wpautop}}</div>
   </div>
 
   <div class="row stream-sections">

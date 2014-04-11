@@ -53,12 +53,11 @@
 <!-- Hi -->
 {% endif %}
 
-
   <!-- Main Content -->
   <div class="container">
 
     {% if issues %}
-      {% for issue in issues %}
+      {% for post in issues %}
         {% include ['issue-content.twig'] %}
       {% endfor %}
     {% else %}

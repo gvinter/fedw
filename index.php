@@ -29,7 +29,5 @@ $context['issues'] = Timber::get_posts($issue_args);
 $context['foo'] = 'bar';
 
 $templates = array('index.twig');
-if (is_home()){
-	array_unshift($templates, 'home.twig');
-}
+
 Timber::render($templates, $context);
