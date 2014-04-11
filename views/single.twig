@@ -2,35 +2,32 @@
 
 {% block content %}
 
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
+{# <pre> #}
+{# {{[post]|print_r}} #}
+{# </pre> #}
 
-				<p class="blog-author">
-					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.display_date }}
-				</p>
+	<div class="banner post-banner {{post.issue_section|slugify_section_title}}"></div>
+	
+	<div class="container">
+	
+		<div class="col-lg-6 single-post-wrapper">
+			<article class="row {{post.issue_section|slugify_section_title}}">
+			  <h1 class="col-sm-10 post-title">{{post.post_title}}</h1>
+			  <div class="col-sm-10 post-content">{{post.post_content}}</div>
+			  <a href="#" class="col-sm-10 post-link">{{post.article_link}}</a>
 
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
+			  <div class="row">
+				  <div class="col-lg-3 author">
+					  <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg"></span>
+			      <span class="galen">
+			        Galen Vinter 
+			        <a href="http://twitter.com/gvinter">@gvinter</a>
+			      </span>
+		      </div>
+	      </div>
+			</article>
+		</div>
 
-			<section class="comments">
-				<div class="respond">
-					<h3 class="h2">Comments</h3>
-						{{ comment_form }}
-					</div>
-					<div class="responses">
-
-						{% for cmt in post.get_comments() %}
-							{% include "comment.twig" with {comment:cmt} %}
-						{% endfor %}
-					</div>
-
-			</section>
-
-		</article>
-	</div> <!-- /content-wrapper -->
+	</div>
 
 {% endblock %}

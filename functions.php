@@ -44,6 +44,7 @@ function add_to_twig($twig){
 	$twig->addExtension(new Twig_Extension_StringLoader());
 	$twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
 	$twig->addFilter('translate_section_title', new Twig_Filter_Function('translate_section_title'));
+	$twig->addFilter('slugify_section_title', new Twig_Filter_Function('slugify_section_title'));
 	// $twig->addFilter('theme_options', get_option('theme_options'));
 	return $twig;
 }
@@ -346,7 +347,47 @@ function translate_section_title($id) {
 		case 'tutorials':
 			return 'Tutorials';
 
+		case 'resources':
+			return 'Resources';
+
+		case 'libraries':
+			return 'Libraries';
+
+		case 'opinions':
+			return 'Opinions';
+
 		default:
 			return 'Other';
+	}
+}
+
+function slugify_section_title($title) {
+	switch ($title) {
+		case 'News':
+			return 'news';
+
+		case 'Frameworks':
+			return 'frameworks';
+			
+		case 'Dev Tools':
+			return 'dev-tools';
+		
+		case 'Inspiration':
+			return 'inspiration';
+		
+		case 'Tutorials':
+			return 'tutorials';
+
+		case 'Resources':
+			return 'resources';
+
+		case 'Libraries':
+			return 'libraries';
+
+		case 'Opinions':
+			return 'opinions';
+		
+		default:
+			return 'other';
 	}
 }

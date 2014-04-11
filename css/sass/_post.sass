@@ -1,0 +1,65 @@
+.single-post-wrapper
+	float: none
+	margin: 0 auto
+
+	h1.post-title
+		margin: 40px 0 0
+
+	.post-content
+		border-left: 2px solid $blueDark
+		margin: 30px 0 30px 20px
+		+mq($to: $screen-xs)
+			width: 90%
+		p
+			padding-top: 4px
+			padding-bottom: 5px
+	.post-link
+		font-weight: bold
+		margin-left: 20px
+	.author
+		margin: 50px 0 0
+		span.headshot
+			display: block
+			width: 80px
+			height: 80px
+			overflow: hidden
+			margin: 0 auto
+			+border-radius(99px)
+		.galen
+			display: block
+			text-align: center
+			margin-top: 5px
+			a
+				display: block
+
+
+.news
+	.post-link
+		color: $orange
+	.post-content
+		border-left: 2px solid $orange
+.frameworks
+	.post-link
+		color: $redDark
+	.post-content
+		border-left: 2px solid $redDark
+.tutorials
+	.post-link
+		color: lighten($navyDark, 20%)
+	.post-content
+		border-left: 2px solid lighten($navyDark, 20%)
+.dev-tools
+	.post-link
+		color: $greenDark
+	.post-content
+		border-left: 2px solid $greenDark
+.resources
+	.post-link
+		color: $purpleDark
+	.post-content
+		border-left: 2px solid $purpleDark
+.opinions
+	.post-link
+		color: $turquoiseDark
+	.post-content
+		border-left: 2px solid $turquoiseDark

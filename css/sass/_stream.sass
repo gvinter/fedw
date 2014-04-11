@@ -77,48 +77,49 @@
 					width: 50%
 			article a
 				font-weight: bold
+				color: $gray-darker
 			// section colors
 			&.news
 				h3
 					background-color: $orange
-				article a
+				article a.post_link
 					color: $orange
 			
 			&.frameworks
 				h3
 					background-color: $redDark
-				article a
+				article a.post_link
 					color: $redDark
 
 			&.tutorials
 				h3
 					background-color: lighten($navyDark, 20%)
-				article a
+				article a.post_link
 					color: lighten($navyDark, 20%)
 
 			&.dev-tools
 				h3
 					background-color: $greenDark
-				article a
+				article a.post_link
 					color: $greenDark
 			
 			&.resources
 				h3
-					background-color: $greenDark
-				article a
-					color: $greenDark
-			
-			// &.dev-tools
-			// 	h3
-			// 		background-color: $greenDark
-			// 	article a
-			// 		color: $greenDark
-
-			&.other
-				h3
 					background-color: $purpleDark
-				article a
+				article a.post_link
 					color: $purpleDark
+			
+			&.opinions
+				h3
+					background-color: $turquoiseDark
+				article a.post_link
+					color: $turquoiseDark
+
+			// &.other
+			// 	h3
+			// 		background-color: $purpleDark
+			// 	article a.post_link
+			// 		color: $purpleDark
 
 			// individual articles
 			article
