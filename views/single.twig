@@ -11,17 +11,18 @@
 	<div class="container">
 	
 		<div class="col-lg-6 single-post-wrapper">
-			<article class="row {{post.issue_section|slugify_section_title}}">
-			  <h1 class="col-sm-10 post-title">{{post.post_title}}</h1>
-			  <div class="col-sm-10 post-content">{{post.post_content}}</div>
-			  <a href="#" class="col-sm-10 post-link">{{post.article_link}}</a>
+			<article class="row {{post.issue_section|slugify_section_title}}" itemscope itemtype="http://schema.org/Article">
+			  <h1 class="col-sm-10 post-title" itemprop="name"><a href="{{post.link}}" itemprop="url">{{post.post_title}}</a></h1>
+			  <p class="col-sm-10 issue_section" itemprop="TYPE"><span>{{post.issue_section}}</span></p>
+			  <div class="col-sm-10 post-content" itemprop="CONTENT">{{post.post_content}}</div>
+			  <a href="#" class="col-sm-10 post-link" itemprop="REFERENCE_URL">{{post.article_link}}</a>
 
 			  <div class="row">
-				  <div class="col-lg-3 author">
-					  <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg"></span>
-			      <span class="galen">
+				  <div class="col-lg-3 author" itemscope itemtype="http://schema.org/Author">
+					  <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg" itemprop="image"></span>
+			      <span class="galen" itemprop="name">
 			        Galen Vinter 
-			        <a href="http://twitter.com/gvinter">@gvinter</a>
+			        <a href="http://twitter.com/gvinter" itemprop="url">@gvinter</a>
 			      </span>
 		      </div>
 	      </div>

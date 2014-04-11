@@ -4,7 +4,14 @@
 
 	h1.post-title
 		margin: 40px 0 0
-
+		a
+			color: $gray-darker
+	.issue_section
+		margin: 15px 0 0
+		span
+			color: #fff
+			padding: 3px 7px
+			text-transform: uppercase
 	.post-content
 		border-left: 2px solid $blueDark
 		margin: 30px 0 30px 20px
@@ -16,8 +23,8 @@
 	.post-link
 		font-weight: bold
 		margin-left: 20px
+		margin-bottom: 50px
 	.author
-		margin: 50px 0 0
 		span.headshot
 			display: block
 			width: 80px
@@ -34,31 +41,43 @@
 
 
 .news
+	.issue_section span
+		background: $orange
 	.post-link
 		color: $orange
 	.post-content
 		border-left: 2px solid $orange
 .frameworks
+	.issue_section span
+		background: $redDark
 	.post-link
 		color: $redDark
 	.post-content
 		border-left: 2px solid $redDark
 .tutorials
+	.issue_section span
+		background: lighten($navyDark, 20%)
 	.post-link
 		color: lighten($navyDark, 20%)
 	.post-content
 		border-left: 2px solid lighten($navyDark, 20%)
 .dev-tools
+	.issue_section span
+		background: $greenDark
 	.post-link
 		color: $greenDark
 	.post-content
 		border-left: 2px solid $greenDark
 .resources
+	.issue_section span
+		background: $purpleDark
 	.post-link
 		color: $purpleDark
 	.post-content
 		border-left: 2px solid $purpleDark
 .opinions
+	.issue_section span
+		background: $turquoiseDark
 	.post-link
 		color: $turquoiseDark
 	.post-content
