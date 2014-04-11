@@ -29,9 +29,9 @@ $context['sections'] = sort_posts_by_category($issue_posts);
 Timber::render(array('single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'), $context);
 
 // Single Issue
-if ( is_singular('issue') ) {
+// if ( is_singular('issue') ) {
 	// error_log(var_export($context, true));
-}
+// }
 
 
 // Single Post / Article
