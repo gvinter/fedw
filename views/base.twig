@@ -6,10 +6,10 @@
   <body class="{{body_class}}" data-source="base.twig">
 
     <!-- Header -->
-    <header>
+    <header itemscope itemtype="WPHeader">
       {% block header %}
         <div class="container">
-          <p class="site-logo"><span>Front-end Dev</span> Weekly</p>
+          <p class="site-logo"><a href="{{site.url}}/"><span>Front-end Dev</span> Weekly</a></p>
         </div>
       
         <!-- 
@@ -40,7 +40,7 @@
       </aside>
     {% endif %} -->
 
-    <footer id="footer">
+    <footer itemscope itemtype="WPFooter">
       {% include 'footer.twig' %}
     </footer>
     

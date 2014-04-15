@@ -11,11 +11,11 @@
 	<div class="container">
 	
 		<div class="col-lg-6 single-post-wrapper">
-			<article class="row {{post.issue_section|slugify_section_title}}" itemscope itemtype="http://schema.org/Article">
+			<article class="row {{post.issue_section|slugify_section_title}}" itemscope itemtype="http://schema.org/BlogPosting">
 			  <h1 class="col-sm-10 post-title" itemprop="name"><a href="{{post.link}}" itemprop="url">{{post.post_title}}</a></h1>
-			  <p class="col-sm-10 issue_section" itemprop="TYPE"><span>{{post.issue_section}}</span></p>
-			  <div class="col-sm-10 post-content" itemprop="CONTENT">{{post.post_content}}</div>
-			  <a href="#" class="col-sm-10 post-link" itemprop="REFERENCE_URL">{{post.article_link}}</a>
+			  <p class="col-sm-10 issue_section" itemprop="learningResourceType"><span>{{post.issue_section}}</span></p>
+			  <div class="col-sm-10 post-content" itemprop="articleBody">{{post.post_content}}</div>
+			  <a href="#" class="col-sm-10 post-link" itemprop="isBasedOnUrl">{{post.article_link}}</a>
 
 			  <div class="row">
 				  <div class="col-lg-3 author" itemscope itemtype="http://schema.org/Author">

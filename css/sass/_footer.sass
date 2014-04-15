@@ -4,6 +4,14 @@ footer
 	color: $white
 	text-align: center
 	padding: 20px 0
+	.footer-mailchimp-form
+		margin: 20px 0 40px
+		+mq($to: $screen-sm)
+			input[type="submit"]
+				margin-top: 15px
+		+mq($from: $screen-sm)
+			input[type="email"]
+				width: 250px
 	a
 		color: $green
 		&:hover

@@ -20,7 +20,5 @@ Posts
 
 ##### TODOs
 
-TODO: Add Schema.org to issues
-TODO: Fix schemas for posts in post-content.twig, single.twig, issue-content.twig
 TODO: "Other issues" page should show just the title of the issue, date, and description
 TODO: categories page should be a simple list of categories under the 3 link nav menu, with posts chronologically displayed below

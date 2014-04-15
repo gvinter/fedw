@@ -1,9 +1,9 @@
-<div class="stream" itemscope itemtype="http://schema.org/BLOGPOSTING">
+<div class="stream" itemscope itemtype="http://schema.org/Article">
 {# <pre> #}
 {# {{site|print_r}} #}
 {# </pre> #}
   <div class="row">
-    <h2 class="issue-title" itemprop="name"><span class="issue-num-date col-sm-2 col-xs-10">Issue {{post.issue_number}} <br/> <span itemprop="POST_DATE">{{ post.post_date|date('F j, Y') }}</span></span> <span class="issue-title col-sm-8 col-xs-10"><a href="{{site.url}}/issue/{{post.slug}}/" itemprop="url">{{post.post_title}}</a></span></h2>
+    <h2 class="issue-title" itemprop="name"><span class="issue-num-date col-sm-2 col-xs-10">Issue {{post.issue_number}} <br/> <span itemprop="datePublished">{{ post.post_date|date('F j, Y') }}</span></span> <span class="issue-title col-sm-8 col-xs-10"><a href="{{site.url}}/issue/{{post.slug}}/" itemprop="url">{{post.post_title}}</a></span></h2>
   </div>
 
   <div class="row issue-commentary">
@@ -14,7 +14,7 @@
         <a href="http://twitter.com/gvinter" itemprop="url">@gvinter</a>
       </span>
     </div>
-    <div class="col-xs-8 commentary" itemprop="CONTENT">{{post.post_content|wpautop}}</div>
+    <div class="col-xs-8 commentary" itemprop="articleBody">{{post.post_content|wpautop}}</div>
   </div>
 
   <div class="row stream-sections">

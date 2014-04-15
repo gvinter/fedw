@@ -25,7 +25,7 @@ $issue_args = array(
 );
 $context['issues'] = Timber::get_posts($issue_args);
 
-// error_log(var_export($context['issues'][0]->issue_number, true));
+error_log(var_export($context['issues'][0]->issue_number, true));
 
 // Just want to get a posts from the most recent Issue
 $posts_args = array(

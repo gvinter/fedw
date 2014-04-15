@@ -1,9 +1,10 @@
-<article class="row" itemscope itemtype="http://schema.org/Article">
-  <h4 class="col-sm-10" itemprop="name"><a href="{{post.link}}" itemprop="url">{{post.post_title}}</a></h4>
-  <p class="col-sm-10" itemprop="CONTENT">{{post.post_content}}</p>
-  <a href="#" class="col-sm-10 post_link" itemprop="REFERENCE_URL">{{post.article_link}}</a>
-  <meta itemprop="POST_DATE" content="{{post.post_date|date('F j, Y')}}">
-  <div itemscope itemtype="http://schema.org/Author">
+<article class="row" itemscope itemtype="http://schema.org/BlogPosting">
+  <h4 class="col-sm-10" itemprop="name">{{post.post_title}}</h4>
+  <p class="col-sm-10" itemprop="articleBody">{{post.post_content}}</p>
+  <a href="#" class="col-sm-10 post_link" itemprop="isBasedOnUrl">{{post.article_link}}</a>
+  <meta itemprop="datePublished" content="{{post.post_date|date('F j, Y')}}" />
+  <meta itemprop="url" content="{{post.link}}" />
+  <div itemprop="author" itemscope itemtype="http://schema.org/Person">
   	<meta itemprop="name" content="Galen Vinter">
   	<meta itemprop="url" content="http://twitter.com/gvinter">
   	<meta itemprop="image" content="{{site.theme.uri}}/img/galen.jpg">

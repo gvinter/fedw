@@ -72,7 +72,7 @@
 				text-transform: uppercase
 				font-weight: 700
 				font-family: $font-roboto
-				color: $white
+				border-bottom: 1px solid
 				+mq($from: $screen-sm)
 					width: 50%
 			article a
@@ -81,37 +81,43 @@
 			// section colors
 			&.news
 				h3
-					background-color: $orange
+					border-color: $orange
+					color: $orange
 				article a.post_link
 					color: $orange
 			
 			&.frameworks
 				h3
-					background-color: $redDark
+					border-color: $redDark
+					color: $redDark
 				article a.post_link
 					color: $redDark
 
 			&.tutorials
 				h3
-					background-color: lighten($navyDark, 20%)
+					border-color: lighten($navyDark, 20%)
+					color: lighten($navyDark, 20%)
 				article a.post_link
 					color: lighten($navyDark, 20%)
 
 			&.dev-tools
 				h3
-					background-color: $greenDark
+					border-color: $greenDark
+					color: $greenDark
 				article a.post_link
 					color: $greenDark
 			
 			&.resources
 				h3
-					background-color: $purpleDark
+					border-color: $purpleDark
+					color: $purpleDark
 				article a.post_link
 					color: $purpleDark
 			
 			&.opinions
 				h3
-					background-color: $turquoiseDark
+					border-color: $turquoiseDark
+					color: $turquoiseDark
 				article a.post_link
 					color: $turquoiseDark
 
