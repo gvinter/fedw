@@ -18,6 +18,8 @@ Posts
 - Category (dev tools, news, tutorials)
 - Tag - used to associate with an issues
 
+Compiling email templates: http://beaker.mailchimp.com/inline-css
+
 ##### TODOs
 
 TODO: "Other issues" page should show just the title of the issue, date, and description

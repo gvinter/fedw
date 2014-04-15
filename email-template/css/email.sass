@@ -106,7 +106,10 @@ a
 table.head-wrap
   width: 100%
   background-color: $blueDark
-  tbody, tbody tr
+  tbody
+    display: block
+    width: 100%
+  tbody tr
     display: block
     width: 100%
 
@@ -200,7 +203,6 @@ h3.issue-title
 
 .section-title
   text-align: center
-  color: #fff
   padding-top: 3px
   padding-bottom: 3px
   max-width: 250px
@@ -239,22 +241,24 @@ h3.issue-title
 
 .resources-title
   border-color: $purpleDark
+  color: $purpleDark
 .resources-link a
   color: $purpleDark
   font-weight: 600
 
 .opinions-title
   border-color: $turquoiseDark
+  color: $turquoiseDark
 .opinions-link a
   color: $turquoiseDark
   font-weight: 600
 
 .ui-ux-title
   border-color: $orangeDark
+  color: $orangeDark
 .ui-ux-link a
   color: $orangeDark
   font-weight: 600
-
 
 p.article-title
   font-size: 16px
