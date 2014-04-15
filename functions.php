@@ -296,10 +296,15 @@ function sort_posts_by_category($posts) {
 		'tutorials' => array(),
 		'opinions' => array(),
 		'resources' => array(),
+		'uiux' => array(),
 		'other' => array()
 	);
 	
 	foreach ($posts as $post) {
+// echo "<pre>";
+// print_r($context['posts']);
+// echo "</pre>";
+
 		
 		switch ($post->issue_section) {
 			case 'News':
@@ -331,7 +336,7 @@ function sort_posts_by_category($posts) {
 				break;
 
 			case 'UI/UX':
-				array_push($sorted_posts['ui-ux'], $post);
+				array_push($sorted_posts['uiux'], $post);
 				break;
 
 			default:
@@ -370,7 +375,7 @@ function translate_section_title($id) {
 		case 'opinions':
 			return 'Opinions';
 
-		case 'ui-ux':
+		case 'uiux':
 			return 'UI/UX';
 
 		default:
@@ -405,7 +410,7 @@ function slugify_section_title($title) {
 			return 'opinions';
 
 		case 'UI/UX':
-			return 'ui-ux';
+			return 'uiux';
 		
 		default:
 			return 'other';

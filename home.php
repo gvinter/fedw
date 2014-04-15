@@ -25,12 +25,13 @@ $issue_args = array(
 );
 $context['issues'] = Timber::get_posts($issue_args);
 
-error_log(var_export($context['issues'][0]->issue_number, true));
+// error_log(var_export($context['issues'][0]->issue_number, true));
 
 // Just want to get a posts from the most recent Issue
 $posts_args = array(
 	// 'tag' => 'Issue ' . $context['issues'][0]->issue_number
-	'tag' => 'issue-1'
+	'tag' => 'issue-1',
+	'posts_per_page' => 10
 );
 
 // get the posts
@@ -40,9 +41,10 @@ $issue_posts = Timber::get_posts($posts_args);
 $context['sections'] = sort_posts_by_category($issue_posts);
  
 // error_log(var_export($context['posts'], true));
-// echo "<pre>";
+echo "<pre>";
 // print_r($context['posts']);
-// echo "</pre>";
+print_r($issue_posts);
+echo "</pre>";
 
 $templates = array('home.twig');
 

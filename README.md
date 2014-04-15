@@ -22,5 +22,6 @@ Compiling email templates: http://beaker.mailchimp.com/inline-css
 
 ##### TODOs
 
+TODO: fix UI/UX tag
 TODO: "Other issues" page should show just the title of the issue, date, and description
 TODO: categories page should be a simple list of categories under the 3 link nav menu, with posts chronologically displayed below
