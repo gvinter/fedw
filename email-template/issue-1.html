@@ -46,72 +46,59 @@
 			<table>
 				<tr>
 					<td>
-						<!-- Issue title -->
-						<h3 class="issue-title">Hi, Elijah Baily</h3>
-						<!-- Issue Commentary -->
+						
+						<h3 class="issue-title">Welcome to Front-end Dev Weekly</h3>
+						
 						<p class="commentary">Hey there. Galen here. I'm a front-end developer and I've been building responsive sites and a real estate theme framework for <a title="Placester" href="https://placester.com" target="_blank">Placester</a> over the past few years. I've come across a lot of resources, both wonderful and terrible. We all do as developers. So I wanted to get to the best content quicker. I wanted a concise email newsletter that would provide me the resources to make me a <strong>better developer</strong> and <strong>more valuable</strong> in the process. I couldn't find one with that mission so I created this one. So every week, I'm going to do the legwork and share with you what I think will accomplish those 2 goals with content and context. This first issue will show you what I mean.</p>
 						<p class="commentary">Whether it's  just talking shop or requests for certain types of content and context, I'm open to feedback and questions, so feel free to <a href="http://twitter.com/gvinter" target="_blank">tweet</a> at or <a href="mailto:galen.vinter@gmail.com" target="_blank">email</a> me.</p>
 
-						<!-- News -->
-
-						<p class="section-title news-title">News</p>
-
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="news-link"><a href="#">http://galenvinter.com</a></p>
-
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="news-link"><a href="#">http://galenvinter.com</a></p>
-
-						<!-- Dev Tools -->
 
 						<p class="section-title dev-tools-title">Dev Tools</p>
 
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
+						<p class="article-title">The media query Sass mixin library I replace RespondJS with</p>
+						<p>Bootstrap uses <a title="RespondJS" href="https://github.com/scottjehl/Respond" target="_blank">RespondJS</a> to deal with media query issues in IE 6-8. However, I prefer not to add another JS library to load. The Guardian (yes, the newspaper), has built this Sass-MQ library that gives you a single Sass mixin that will simplify all media queries, and allow you to truly build mobile-first by forgetting about IE 6-8. And yes, I use this in all of my projects now, even with Bootstrap.</p>
+						<p class="dev-tools-link"><a href="https://github.com/guardian/sass-mq">https://github.com/guardian/sass-mq</a></p>
+
+						<p class="article-title">Github + Markdown = handsome programming books</p>						
+						<p>There's something about this project. I love Markdown. I love Github. And I love the emergence of self-publishing. Especially with something like programming, buying books can be a real waste of money (eBooks are arguably more efficient) and space. Plus, they're not searchable. Duh. I think the Codebox Team did a great job, not to mention it's less than 2 weeks old. These guys also have an amazing attention to detail. The site's responsive and still usable. The progress bar at the top is super helpful (Kindle/iBook style). And built-in JS exercises available (soon to have Ruby and more). I believe this is the next step not just for individuals publishing books but also for companies to produce documentation and tutorials for their developers. I'm even considering implementing this for non-developer users when teaching them how to maintain a site.</p>
+						<p class="dev-tools-link"><a href="http://www.gitbook.io/">http://www.gitbook.io/</a></p>
+
+
+						<p class="section-title opinions-title">Opinions</p>
+
+						<p class="article-title">CoffeeScript can be syntactically ambiguous even for seasoned devs</p>
+						<p>I ran into a very small <a title="StickyKit" href="http://leafo.net/sticky-kit/" target="_blank">JS library</a> in the last project I worked on. It's actually a very small library and works quite well for what it's trying to achieve. But I needed it to do more than it did, so I had to extend the library. I looked at the CoffeeScript and couldn't decipher it. I decided to work with the compiled JS instead (I know, yuck). Part of me felt defeated by the syntactical ambiguity, but then I read Jeff Walker's post below on CoffeeScript's issues with ambiguity and readability and was relieved I was in good company. The true value here is not throwing your hands up and saying "I hate CoffeeScript", but Jeff Walker identifies how best to assess its weaknesses so you get to make the decision on your next project about whether to use it.</p>
+						<p class="opinions-link"><a href="http://www.walkercoderanger.com/blog/2014/03/coffeescript-isnt-the-answer/">http://www.walkercoderanger.com/blog/2014/03/coffeescript-isnt-the-answer/</a></p>
+
+						<p class="article-title">To use data-* attributes instead of classes or not to use...</p>
+						<p>The functional arguments are strong for using data-* (data state) attributes in HTML elements. You can even use them for styling, although it will feel a little heavy in your Sass/CSS. Data states might feel like an unnecessary shift from simply adding an "active" class to a nav bar to slide it out. But when you build out more cumbersome web apps, you'll want the reusable data states, you'll want data states to be functional instead of stylistic (they should describe an element's literal state), and they're best when reusable.  However, it's a double-edged sword: data-* can cause a slight performance hit when the DOM is stuffed. Todd Motto makes a reasonable argument for data states, but what's really interesting here is the conversation that carries out in the comments at the bottom. I love what data states provide in functionality, but won't commit to them unless I'm sure performance won't suffer beyond what's reasonable.</p>
+						<p class="opinions-link"><a href="http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/">http://toddmotto.com/stop-toggling-classes-with-js-use-behaviour-driven-dom-manipulation-with-data-states/</a></p>
 						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="dev-tools-link"><a href="#">http://galenvinter.com</a></p>
 
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="dev-tools-link"><a href="#">http://galenvinter.com</a></p>
+						<p class="section-title resources-title">Resources</p>
 
-						<!-- Tutorials -->
+						<p class="article-title">The next generation of icons</p>
+						<p>Imagine making an icon multi-colored, multi-toned, or inverted by using Sass/Less instead of changing the icon itself. If that doesn't get you to immediately click the link below, then this should: imagine you could use the same icon despite its orientation (the same arrow will point in any direction), and the same icon will scale and actually be 3 unique icons in one (more detail when larger, less when smaller for efficiency). It was a Kickstarter project [that actually launched], and I think the concept is spectacular. And if you're worried about browser compatibility, don't be. It ships with versions based on which version of IE you need to support, but all the best features are supported all the way back to IE9! On seeing their demos my response was, "Wow - that's the way they should work".</p>
+						<p class="resources-link"><a href="https://useiconic.com/tour/">https://useiconic.com/tour/</a></p>
 
-						<p class="section-title tutorials-title">Tutorials</p>
+						<p class="article-title">A list of HTML and CSS gotchas</p>
+						<p>We've all been there - that moment you question all your years of HTML/CSS because you should know why a parent element has a "height: 0;" when its children are all floated. "Oh but why again!?" you say! Mark Otto has compiled a list of these gotchas for us. Not only that, but taking the time to read through them will make you a better CSS author. Small reminders like, :elements with a float become 'display: block;'". Well, of course I know that's true, but I still catch myself writing that redundancy from time to time. When you think you've lost your mind on what appears to be a mini CSS issue, use this list as a sanity check.</p>
+						<p class="resources-link"><a href="http://wtfhtmlcss.com/">http://wtfhtmlcss.com/</a></p>
 
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="tutorials-link"><a href="#">http://galenvinter.com</a></p>
 
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="tutorials-link"><a href="#">http://galenvinter.com</a></p>
+						<p class="section-title frameworks-title">Frameworks</p>
 
-						<!-- Other -->
-						
-						<p class="section-title other-title">Frameworks</p>
+						<p class="article-title">An HTML framework for an iOS native feel</p>
+						<p>What do we look for from iOS-emulating frameworks? We want the cool features - pull to refresh, swiping, transitions and of course the buttons, lists, and menus. But there's more to frameworks than the cosmetics. Framework7 is truly built with apps in mind. It has built in routing and caching making the navigation history an apparent breeze, which all developers hate when trying to emulate a mobile app experience. Although I'm a big jQuery fan, I love that this is built from the ground up without jQuery - even though the syntax is very similar. This means that the library is focused heavily on its own mission, not on supporting the rest of the jQuery world's needs. I won't pretend like I've gotten my hands dirty with the code, so I won't speak to performance or ease of use at scale. However, with over 1,800 stars and 180 forks on Github, I'm sure their docs and tutorials will be populated soon and they'll be more consistently in the PhoneGap build conversations.</p>
+						<p class="frameworks-link"><a href="http://www.idangero.us/framework7/">http://www.idangero.us/framework7/</a></p>
 
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="other-link"><a href="#">http://galenvinter.com</a></p>
 
-						<p class="article-title">This  a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-						
-						<p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
-						<p class="other-link"><a href="#">http://galenvinter.com</a></p>
+						<p class="section-title ui-ux-title">Frameworks</p>
 
-						<!-- Callout Panel -->
-						<!-- <p class="callout">
-							Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. <a href="#">Click it! &raquo;</a>
-						</p> -->
+						<p class="article-title">Understanding functional animations</p>
+						<p>Animations can be cool. But more importantly, they can be leveraged to display contextual information to the user. I doubt this is news to anyone reading this, but if you're like me, it can be tough to find the words to communicate why this is true. This easy read gives you words that will enable you to school your UI designer, product guy, boss or whoever in functional animations. Keep this in your back pocket.</p>
+						<p class="ui-ux-link"><a href="https://medium.com/p/926eb80d64e3">https://medium.com/p/926eb80d64e3</a></p>
+
 												
 						<!-- social & contact -->
 						<table class="social" width="100%">
