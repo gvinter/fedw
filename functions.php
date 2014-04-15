@@ -294,6 +294,8 @@ function sort_posts_by_category($posts) {
 		'dev-tools' => array(),
 		'inspiration' => array(),
 		'tutorials' => array(),
+		'opinions' => array(),
+		'resources' => array(),
 		'other' => array()
 	);
 	
@@ -318,6 +320,18 @@ function sort_posts_by_category($posts) {
 			
 			case 'Tutorials':
 				array_push($sorted_posts['tutorials'], $post);
+				break;
+
+			case 'Opinions':
+				array_push($sorted_posts['opinions'], $post);
+				break;
+
+			case 'Resources':
+				array_push($sorted_posts['resources'], $post);
+				break;
+
+			case 'UI/UX':
+				array_push($sorted_posts['ui-ux'], $post);
 				break;
 
 			default:
@@ -356,6 +370,9 @@ function translate_section_title($id) {
 		case 'opinions':
 			return 'Opinions';
 
+		case 'ui-ux':
+			return 'UI/UX';
+
 		default:
 			return 'Other';
 	}
@@ -386,6 +403,9 @@ function slugify_section_title($title) {
 
 		case 'Opinions':
 			return 'opinions';
+
+		case 'UI/UX':
+			return 'ui-ux';
 		
 		default:
 			return 'other';
