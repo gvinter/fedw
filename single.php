@@ -17,7 +17,8 @@ $context['comment_form'] = TimberHelper::get_comment_form();
 
 // Just want to get a posts from the current Issue
 $posts_args = array(
-	'tag' => 'issue-' . $context['post']->issue_number
+	'tag' => 'issue-' . $context['post']->issue_number,
+	'posts_per_page' => 10
 );
 
 // get the posts
