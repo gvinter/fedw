@@ -41,10 +41,10 @@ $issue_posts = Timber::get_posts($posts_args);
 $context['sections'] = sort_posts_by_category($issue_posts);
  
 // error_log(var_export($context['posts'], true));
-echo "<pre>";
+// echo "<pre>";
 // print_r($context['posts']);
-print_r($issue_posts);
-echo "</pre>";
+// print_r($issue_posts);
+// echo "</pre>";
 
 $templates = array('home.twig');
 
