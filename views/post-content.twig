@@ -1,7 +1,7 @@
 <article class="row" itemscope itemtype="http://schema.org/BlogPosting">
   <h4 class="col-sm-10" itemprop="name">{{post.post_title}}</h4>
   <p class="col-sm-10" itemprop="articleBody">{{post.post_content}}</p>
-  <a href="#" class="col-sm-10 post_link" itemprop="isBasedOnUrl">{{post.article_link}}</a>
+  <a href="{{post.article_link}}" class="col-sm-10 post_link" itemprop="isBasedOnUrl">{{post.article_link}}</a>
   <meta itemprop="datePublished" content="{{post.post_date|date('F j, Y')}}" />
   <meta itemprop="url" content="{{post.link}}" />
   <div itemprop="author" itemscope itemtype="http://schema.org/Person">
