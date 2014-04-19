@@ -1,4 +1,4 @@
-<article class="row" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="row" id="{{post.slug}}" itemscope itemtype="http://schema.org/BlogPosting">
   <h4 class="col-sm-10" itemprop="name">{{post.post_title}}</h4>
   <p class="col-sm-10" itemprop="articleBody">{{post.post_content}}</p>
   <a href="{{post.article_link}}" class="col-sm-10 post_link" itemprop="isBasedOnUrl">{{post.article_link}}</a>
@@ -10,3 +10,7 @@
   	<meta itemprop="image" content="{{site.theme.uri}}/img/galen.jpg">
   </div>
 </article>
+
+{# <pre>
+{{post|print_r}}
+</pre> #}

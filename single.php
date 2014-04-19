@@ -27,6 +27,9 @@ $issue_posts = Timber::get_posts($posts_args);
 // sort posts by category (but really a custom field)
 $context['sections'] = sort_posts_by_category($issue_posts);
 
+// add sidebar
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
+
 Timber::render(array('single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'), $context);
 
 // Single Issue

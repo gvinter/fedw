@@ -6,7 +6,14 @@
 	
 	<!-- Main Content -->
   <div class="container">
-		{% include ['issue-content.twig'] %}
+  	<div class="row">
+  		<div class="col-md-7">
+				{% include ['issue-content.twig'] %}
+			</div>
+			<aside class="col-md-3">
+		    {{sidebar}}
+			</aside>
+  	</div>
 	</div>
 
 {% endblock %}

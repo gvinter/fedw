@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	
+	<div class="banner issue-banner"></div>
+	
+	<!-- Main Content -->
+  <div class="container">
+		{% for post in issues %}
+    	{% include ['issue-content.twig'] %}
+  	{% endfor %}
+	</div>
+
+{% endblock %}

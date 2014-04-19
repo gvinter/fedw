@@ -6,17 +6,26 @@
     <h2 class="issue-title" itemprop="name"><span class="issue-num-date col-sm-2 col-xs-10">Issue {{post.issue_number}} <br/> <span itemprop="datePublished">{{ post.post_date|date('F j, Y') }}</span></span> <span class="issue-title col-sm-8 col-xs-10"><a href="{{site.url}}/issue/{{post.slug}}/" itemprop="url">{{post.post_title}}</a></span></h2>
   </div>
 
-  <div class="row issue-commentary">
-    <div class="issue-commentary-meta col-xs-2" itemscope itemtype="http://schema.org/Author">
-      <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg" itemprop="image" alt="Galen Vinter"></span>
-      <span class="galen" itemprop="name">
-        Galen Vinter 
-        <a href="http://twitter.com/gvinter" itemprop="url">@gvinter</a>
-      </span>
+  
+    <div class="row issue-commentary">
+      
+      <div class="issue-commentary-meta col-xs-2" itemscope itemtype="http://schema.org/Author">
+        {% if author_hide %}
+          <meta itemprop="image" content="{{site.theme.uri}}/img/galen.jpg" />
+          <meta itemprop="name" content="Galen Vinter" />
+          <meta itemprop="url" content="http://twitter.com/gvinter" />
+        {% else %}
+          <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg" itemprop="image" alt="Galen Vinter"></span>
+          <span class="galen" itemprop="name">
+            Galen Vinter 
+            <a href="http://twitter.com/gvinter" itemprop="url">@gvinter</a>
+          </span>
+        {% endif %}
+      </div>
+      <div class="col-xs-8 commentary" itemprop="articleBody">{{post.post_content|wpautop}}</div>
     </div>
-    <div class="col-xs-8 commentary" itemprop="articleBody">{{post.post_content|wpautop}}</div>
-  </div>
-
+  
+  
   <div class="row stream-sections">
   
   	{% for key, section in sections %}
