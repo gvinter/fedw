@@ -6,9 +6,16 @@
 	
 	<!-- Main Content -->
   <div class="container">
-		{% for post in issues %}
-    	{% include ['issue-content.twig'] %}
-  	{% endfor %}
+		<div class="row">
+			<div class="col-md-7">
+				{% for post in issues %}
+		    	{% include ['issue-content.twig'] %}
+		  	{% endfor %}
+			</div>
+			<aside class="col-md-3">
+		    {{sidebar}}
+			</aside>
+		</div>
 	</div>
 
 {% endblock %}

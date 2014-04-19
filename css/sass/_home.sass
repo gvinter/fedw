@@ -71,6 +71,8 @@ h4
 	.banner-signup
 		background: $blueDark
 		background: rgba(41, 128, 185, 0.6)
+		.email-label
+			display: none
 		.form-inline
 			text-align: center
 			padding: 20px 0
@@ -116,4 +118,11 @@ h4
 			// margin-left: -240px
 			// margin-top: 7px
 			position: absolute
-			
+
+body.home
+	.stream
+		@media (min-width: $screen-sm)
+			padding: 0 70px
+		@media (min-width: $screen-md)
+			padding: 0 150px
+		

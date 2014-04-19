@@ -10,7 +10,7 @@
     <div class="row issue-commentary">
       
       <div class="issue-commentary-meta col-xs-2" itemscope itemtype="http://schema.org/Author">
-        {% if author_hide %}
+        {% if hide_author %}
           <meta itemprop="image" content="{{site.theme.uri}}/img/galen.jpg" />
           <meta itemprop="name" content="Galen Vinter" />
           <meta itemprop="url" content="http://twitter.com/gvinter" />
@@ -25,15 +25,15 @@
       <div class="col-xs-8 commentary" itemprop="articleBody">{{post.post_content|wpautop}}</div>
     </div>
   
-  
-  <div class="row stream-sections">
-  
-  	{% for key, section in sections %}
-  		{% if section %}
-      	{% include ['section-content.twig'] %}
-      {% endif %}
-    {% endfor %}
+  {% if hide_issue_posts|bang %}
 
-  </div>
+    <div class="row stream-sections">
+    	{% for key, section in sections %}
+    		{% if section %}
+        	{% include ['section-content.twig'] %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
 
 </div><!-- /stream -->

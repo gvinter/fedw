@@ -42,16 +42,18 @@ function add_to_context($data){
 function add_to_twig($twig){
 	/* this is where you can add your own fuctions to twig */
 	$twig->addExtension(new Twig_Extension_StringLoader());
-	$twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
+	$twig->addFilter('bang', new Twig_Filter_Function('bang'));
 	$twig->addFilter('translate_section_title', new Twig_Filter_Function('translate_section_title'));
 	$twig->addFilter('slugify_section_title', new Twig_Filter_Function('slugify_section_title'));
 	// $twig->addFilter('theme_options', get_option('theme_options'));
 	return $twig;
 }
 
-function myfoo($text){
-  	$text .= ' bar!';
-  	return $text;
+function bang($value){
+	if ($value != true) {
+		return true;
+	}
+	return false;
 }
 
 function load_scripts(){

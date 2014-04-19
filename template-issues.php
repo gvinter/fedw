@@ -33,7 +33,10 @@ $issue_posts = Timber::get_posts($posts_args);
 $context['sections'] = sort_posts_by_category($issue_posts);
 
 // Issues page shouldn't show author meta info
-$context['author_hide'] = true;
+$context['hide_author'] = true;
+
+// Issues page shouldn't show issue posts
+$context['hide_issue_posts'] = true;
 
 // error_log(var_export($context['posts'], true));
 // echo "<pre>";
@@ -41,6 +44,8 @@ $context['author_hide'] = true;
 // print_r($issue_posts);
 // echo "</pre>";
 
+// add sidebar
+$context['sidebar'] = Timber::get_sidebar('sidebar.php');
 
 // set template
 $templates = array('issues.twig');
