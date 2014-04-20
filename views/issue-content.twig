@@ -9,20 +9,24 @@
   
     <div class="row issue-commentary">
       
-      <div class="issue-commentary-meta col-xs-2" itemscope itemtype="http://schema.org/Author">
         {% if hide_author %}
-          <meta itemprop="image" content="{{site.theme.uri}}/img/galen.jpg" />
-          <meta itemprop="name" content="Galen Vinter" />
-          <meta itemprop="url" content="http://twitter.com/gvinter" />
+          <div class="issue-commentary-meta col-sm-2" itemscope itemtype="http://schema.org/Author">
+            <meta itemprop="image" content="{{site.theme.uri}}/img/galen.jpg" />
+            <meta itemprop="name" content="Galen Vinter" />
+            <meta itemprop="url" content="http://twitter.com/gvinter" />
+          </div>
+          <div class="col-xs-10 col-sm-8 author-hidden commentary" itemprop="articleBody">{{post.post_content|wpautop}}</div>
         {% else %}
-          <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg" itemprop="image" alt="Galen Vinter"></span>
-          <span class="galen" itemprop="name">
-            Galen Vinter 
-            <a href="http://twitter.com/gvinter" itemprop="url">@gvinter</a>
-          </span>
+          <div class="issue-commentary-meta col-xs-2" itemscope itemtype="http://schema.org/Author">
+            <span class="headshot"><img src="{{site.theme.uri}}/img/galen.jpg" itemprop="image" alt="Galen Vinter"></span>
+            <span class="galen" itemprop="name">
+              Galen Vinter 
+              <a href="http://twitter.com/gvinter" itemprop="url">@gvinter</a>
+            </span>
+          </div>
+          <div class="col-xs-8 commentary" itemprop="articleBody">{{post.post_content|wpautop}}</div>
         {% endif %}
-      </div>
-      <div class="col-xs-8 commentary" itemprop="articleBody">{{post.post_content|wpautop}}</div>
+      
     </div>
   
   {% if hide_issue_posts|bang %}
