@@ -29,16 +29,6 @@ header
 	background: $blue
 	+gradient-radial(lighten($blue, 5%), $blue)
 	color: $white
-
-.issue-banner
-	h1
-		margin: 0
-		font-weight: 300
-		font-size: 25px
-		line-height: 38px
-		text-align: center
-		padding: 20px 0	
-.post-banner
 	p
 		margin: 0
 		font-weight: 300
@@ -49,3 +39,9 @@ header
 		strong
 			font-weight: 300
 			color: $yellow
+
+.issues-archive-title
+	font-size: 22px
+	text-transform: uppercase
+	+mq($to: $screen-sm)
+		text-align: center

@@ -2,7 +2,13 @@
 
 {% block content %}
 	
-	<div class="banner issue-banner"></div>
+	<div class="post-banner {{post.issue_section|slugify_section_title}}">
+		<div class="container">
+			<div class="col-sm-8 col-sm-push-1">
+				<p>{{theme_options.home_headline}}</p>
+			</div>
+		</div>
+	</div>
 	
 	<!-- Main Content -->
   <div class="container">
