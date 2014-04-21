@@ -300,6 +300,7 @@ function sort_posts_by_category($posts) {
 		'resources' => array(),
 		'uiux' => array(),
 		'libraries' => array(),
+		'learning' => array(),
 		'performance' => array(),
 		'seo' => array(),
 		'other' => array()
@@ -348,6 +349,10 @@ function sort_posts_by_category($posts) {
 				array_push($sorted_posts['libaries'], $post);
 				break;
 
+			case 'Learning':
+				array_push($sorted_posts['learning'], $post);
+				break;
+
 			case 'Performance':
 				array_push($sorted_posts['performance'], $post);
 				break;
@@ -389,6 +394,9 @@ function translate_section_title($id) {
 		case 'libraries':
 			return 'Libraries';
 
+		case 'learning':
+			return 'Learning';
+		
 		case 'opinions':
 			return 'Opinions';
 
@@ -435,6 +443,9 @@ function slugify_section_title($title) {
 
 		case 'SEO':
 			return 'seo';
+
+		case 'Learning':
+			return 'learning';
 
 		case 'Performance':
 			return 'performance';
