@@ -299,6 +299,9 @@ function sort_posts_by_category($posts) {
 		'opinions' => array(),
 		'resources' => array(),
 		'uiux' => array(),
+		'libraries' => array(),
+		'performance' => array(),
+		'seo' => array(),
 		'other' => array()
 	);
 	
@@ -341,6 +344,18 @@ function sort_posts_by_category($posts) {
 				array_push($sorted_posts['uiux'], $post);
 				break;
 
+			case 'Libraries':
+				array_push($sorted_posts['libaries'], $post);
+				break;
+
+			case 'Performance':
+				array_push($sorted_posts['performance'], $post);
+				break;
+
+			case 'SEO':
+				array_push($sorted_posts['seo'], $post);
+				break;
+
 			default:
 				array_push($sorted_posts['other'], $post);
 				break;
@@ -380,12 +395,19 @@ function translate_section_title($id) {
 		case 'uiux':
 			return 'UI/UX';
 
+		case 'seo':
+			return 'SEO';
+
+		case 'performance':
+			return 'Performance';
+
 		default:
 			return 'Other';
 	}
 }
 
 function slugify_section_title($title) {
+	error_log($title);
 	switch ($title) {
 		case 'News':
 			return 'news';
@@ -410,6 +432,12 @@ function slugify_section_title($title) {
 
 		case 'Opinions':
 			return 'opinions';
+
+		case 'SEO':
+			return 'seo';
+
+		case 'Performance':
+			return 'performance';
 
 		case 'UI/UX':
 			return 'uiux';

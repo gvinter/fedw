@@ -45,3 +45,17 @@ header
 	text-transform: uppercase
 	+mq($to: $screen-sm)
 		text-align: center
+
+// Banner Nav
+.banner-menu
+	background: $white
+	ul
+		padding: 20px 0 0
+		text-align: center
+		li
+			padding: 10px 0
+			&.active a
+				color: $orangeDark
+			+mq($from: $screen-xs)
+				display: inline
+				padding: 0 25px

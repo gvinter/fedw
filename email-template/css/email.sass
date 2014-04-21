@@ -4,6 +4,7 @@ $gray: lighten(#000, 33.5%) // #555
 $gray-light: lighten(#000, 60%)   // #999
 $gray-lighter: lighten(#000, 93.5%) // #eee
 
+// Custom Theme Colors
 $white: #fff
 $turquoise: #1abc9c
 $turquoiseDark: #16a085
@@ -25,6 +26,18 @@ $clouds: #ecf0f1
 $cloudsDark: #bdc3c7
 $concrete: #95a5a6
 $concreteDark: #7f8c8d
+
+// Category Colors
+$resources: $purpleDark
+$libraries: $turquoiseDark
+$performance: $turquoise
+$uiux: $orangeDark
+$devtools: $greenDark
+$frameworks: $redDark
+$opinions: $turquoiseDark
+$tutorials: lighten($navyDark, 20%)
+$news: $orange
+$seo: $purple
 
 // GLOBAL
 
@@ -122,6 +135,14 @@ table.head-wrap
   text-align: center
   width: 100%
   display: block
+  a.view-in-browser
+    color: #fff
+    text-decoration: none
+    text-align: right
+    text-transform: uppercase
+    display: block
+    font-size: 13px
+    font-weight: bold
   h4, h5
     color: #fff
   h4
@@ -148,6 +169,11 @@ table
   padding-top: 15px
   font-size: 10px
   font-weight: bold
+
+.footer-bottom
+  width: 100%
+  display: block
+  padding: 0 0 10px 0
 
 // TYPOGRAPHY
 
@@ -212,52 +238,73 @@ h3.issue-title
   border-bottom: 1px solid
 
 .news-title
-  border-color: $orange
-  color: $orange
+  border-color: $news
+  color: $news
 .news-link a
-  color: $orange
+  color: $news
   font-weight: 600
 
 .tutorials-title
-  border-color: lighten($navyDark, 20%)
-  color: lighten($navyDark, 20%)
+  border-color: $tutorials
+  color: $tutorials
 .tutorials-link a
-  color: lighten($navyDark, 20%)
+  color: $tutorials
   font-weight: 600
 
 .frameworks-title
-  border-color: $redDark
-  color: $redDark
+  border-color: $frameworks
+  color: $frameworks
 .frameworks-link a
-  color: $redDark
+  color: $frameworks
   font-weight: 600
 
 .dev-tools-title
-  border-color: $greenDark
-  color: $greenDark
+  border-color: $devtools
+  color: $devtools
 .dev-tools-link a
-  color: $greenDark
+  color: $devtools
   font-weight: 600
 
 .resources-title
-  border-color: $purpleDark
-  color: $purpleDark
+  border-color: $resources
+  color: $resources
 .resources-link a
-  color: $purpleDark
+  color: $resources
   font-weight: 600
 
 .opinions-title
-  border-color: $turquoiseDark
-  color: $turquoiseDark
+  border-color: $opinions
+  color: $opinions
 .opinions-link a
-  color: $turquoiseDark
+  color: $opinions
   font-weight: 600
 
-.ui-ux-title
-  border-color: $orangeDark
-  color: $orangeDark
-.ui-ux-link a
-  color: $orangeDark
+.uiux-title
+  border-color: $uiux
+  color: $uiux
+.uiux-link a
+  color: $uiux
+  font-weight: 600
+
+.seo-title
+  border-color: $seo
+  color: $seo
+.seo-link a
+  color: $seo
+  font-weight: 600
+
+.performance-title
+  border-color: $performance
+  color: $performance
+.performance-link a
+  color: $performance
+  font-weight: 600
+
+.libraries-title
+  border-color: $libraries
+  color: $libraries
+.libraries-link a
+  color: $libraries
   font-weight: 600
 
 p.article-title
@@ -320,9 +367,13 @@ ul
   clear: both!important
 
 /* This should also be a block element, so that it will fill 100% of the .container
+.header-content
+  padding: 15px 15px 5px
 
 .content
   padding: 15px
+
+.content, .header-content
   max-width: 600px
   margin: 0 auto
   display: block

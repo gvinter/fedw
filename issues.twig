@@ -10,11 +10,27 @@
 		</div>
 	</div>
 	
+	<div class="banner-menu">
+    <div class="container">
+      <nav>
+        {# <pre>
+          {{last_issue|print_r}}
+        </pre> #}
+        <ul>
+        	<li><a href="{{site.url}}/">Home</a></li>
+          <li class="active"><a href="{{site.url}}/issues/">All Issues</a></li>
+          <li><a href="{{site.url}}/issue/{{last_issue.slug}}">Last Week</a></li>
+          {# <li><a href="{{site.url}}/categories/">By Category</a></li> #}
+        </ul>
+      </nav>
+    </div>
+  </div>
+
 	<!-- Main Content -->
   <div class="container">
 		<div class="row">
 			<div class="col-md-7">
-				<h1 class="issues-archive-title">Issues Archive</h1>
+				{# <h1 class="issues-archive-title">Issues Archive</h1> #}
 				{% for post in issues %}
 		    	{% include ['issue-content.twig'] %}
 		  	{% endfor %}
