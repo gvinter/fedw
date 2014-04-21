@@ -24,8 +24,11 @@ $context['issues'] = Timber::get_posts($issue_args);
 // grab last issue
 $context['last_issue'] = $context['issues'][1];
 
-// remove last issue from issues array
-array_pop($context['issues']);
+
+if ($context['last_issue']) {
+	// remove last issue from issues array
+	array_pop($context['issues']);
+}
 
 // Just want to get a posts from the most recent Issue
 $posts_args = array(

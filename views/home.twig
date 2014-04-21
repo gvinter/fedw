@@ -16,18 +16,19 @@
       </div>
     </div>
 
-    <div class="banner-menu">
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="{{site.url}}/issues/">All Issues</a></li>
-            <li><a href="{{site.url}}/issue/{{last_issue.slug}}">Last Week</li>
-            {# <li><a href="{{site.url}}/categories/">By Category</a></li> #}
-          </ul>
-        </nav>
+    {% if last_issue %}
+      <div class="banner-menu">
+        <div class="container">
+          <nav>
+            <ul>
+              <li><a href="{{site.url}}/issues/">All Issues</a></li>
+              <li><a href="{{site.url}}/issue/{{last_issue.slug}}">Last Week</li>
+              {# <li><a href="{{site.url}}/categories/">By Category</a></li> #}
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-
+    {% endif %}
   </div>
 
 <!--  -->
