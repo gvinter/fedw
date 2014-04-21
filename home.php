@@ -32,7 +32,7 @@ if ($context['last_issue']) {
 
 // Just want to get a posts from the most recent Issue
 $posts_args = array(
-	'tag' => 'Issue ' . $context['issues'][0]->issue_number,
+	'tag' => 'issue-' . $context['issues'][0]->issue_number,
 	// 'tag' => 'issue-#',
 	'posts_per_page' => 10
 );
