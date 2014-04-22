@@ -293,8 +293,10 @@ function sort_posts_by_category($posts) {
 
 	$sorted_posts = array(
 		'news' => array(),
+		'performance' => array(),
 		'frameworks' => array(),
 		'dev-tools' => array(),
+		'seo' => array(),
 		'inspiration' => array(),
 		'tutorials' => array(),
 		'opinions' => array(),
@@ -302,8 +304,6 @@ function sort_posts_by_category($posts) {
 		'uiux' => array(),
 		'libraries' => array(),
 		'learning' => array(),
-		'performance' => array(),
-		'seo' => array(),
 		'other' => array()
 	);
 	
