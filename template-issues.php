@@ -20,20 +20,20 @@ $issue_args = array(
 $context['issues'] = Timber::get_posts($issue_args);
 
 // Just want to get a posts from the most recent Issue
-$posts_args = array(
-	'tag' => 'Issue ' . $context['issues'][0]->issue_number,
-	// 'tag' => 'issue-#',
-	'posts_per_page' => 10
-);
+// $posts_args = array(
+// 	'tag' => 'Issue ' . $context['issues'][0]->issue_number,
+// 	// 'tag' => 'issue-#',
+// 	'posts_per_page' => 10
+// );
 
 // get the posts
-$issue_posts = Timber::get_posts($posts_args);
+// $issue_posts = Timber::get_posts($posts_args);
 
 // grab last issue
 $context['last_issue'] = $context['issues'][1];
 
 // sort posts by category (but really a custom field)
-$context['sections'] = sort_posts_by_category($issue_posts);
+// $context['sections'] = sort_posts_by_category($issue_posts);
 
 // Issues page shouldn't show author meta info
 $context['hide_author'] = true;
