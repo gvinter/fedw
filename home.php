@@ -30,10 +30,17 @@ if ($context['last_issue']) {
 	array_pop($context['issues']);
 }
 
-// Just want to get a posts from the most recent Issue
+// This is a hack because I haven't fixed the metadata string double-saving into an array
+if (is_array($context['issues'][0]->issue_number)) {
+	$context['issue_number'] = $context['issues'][0]->issue_number[0];
+} else {
+	$context['issue_number'] = $context['issues'][0]->issue_number;
+}
+
+
+// Just want to get a posts from the current Issue
 $posts_args = array(
-	'tag' => 'issue-' . $context['issues'][0]->issue_number,
-	// 'tag' => 'issue-#',
+	'tag' => 'issue-' . $context['issue_number'],
 	'posts_per_page' => 10
 );
 
@@ -45,8 +52,7 @@ $context['sections'] = sort_posts_by_category($issue_posts);
 
 // error_log(var_export($context['posts'], true));
 // echo "<pre>";
-// print_r($context['posts']);
-// print_r($issue_posts);
+// print_r($context['issues']);
 // echo "</pre>";
 
 // set template

@@ -45,6 +45,7 @@ function add_to_twig($twig){
 	$twig->addFilter('bang', new Twig_Filter_Function('bang'));
 	$twig->addFilter('translate_section_title', new Twig_Filter_Function('translate_section_title'));
 	$twig->addFilter('slugify_section_title', new Twig_Filter_Function('slugify_section_title'));
+	$twig->addFilter('check_for_array', new Twig_Filter_Function('check_for_array'));
 	// $twig->addFilter('theme_options', get_option('theme_options'));
 	return $twig;
 }
@@ -311,8 +312,13 @@ function sort_posts_by_category($posts) {
 // print_r($context['posts']);
 // echo "</pre>";
 
+		if (is_array($post->issue_section)) {
+			$issue_section = $post->issue_section[0];
+		} else {
+			$issue_section = $post->issue_section;
+		}
 		
-		switch ($post->issue_section) {
+		switch ($issue_section) {
 			case 'News':
 				array_push($sorted_posts['news'], $post);
 				break;
@@ -415,7 +421,7 @@ function translate_section_title($id) {
 }
 
 function slugify_section_title($title) {
-	error_log($title);
+	// error_log($title);
 	switch ($title) {
 		case 'News':
 			return 'news';
@@ -456,4 +462,14 @@ function slugify_section_title($title) {
 		default:
 			return 'other';
 	}
+}
+
+function check_for_array($data) {
+	// This is a hack because I haven't fixed the metadata string double-saving into an array
+	if (is_array($data)) {
+		$value = $data[0];
+	} else {
+		$value = $data;
+	}
+	return $value;
 }

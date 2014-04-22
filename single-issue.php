@@ -15,9 +15,22 @@ $context['post'] = $post;
 $context['wp_title'] .= ' - ' . $post->title();
 $context['comment_form'] = TimberHelper::get_comment_form();
 
+
+// echo "<pre>";
+// print_r($context['post']->issue_number);
+// echo "</pre>";
+
+// This is a hack because I haven't fixed the metadata string double-saving into an array
+if (is_array($context['post']->issue_number)) {
+	$context['issue_number'] = $context['post']->issue_number[0];
+} else {
+	$context['issue_number'] = $context['post']->issue_number;
+}
+
+
 // Just want to get a posts from the current Issue
 $posts_args = array(
-	'tag' => 'issue-' . $context['post']->issue_number,
+	'tag' => 'issue-' . $context['issue_number'],
 	'posts_per_page' => 10
 );
 
