@@ -304,7 +304,8 @@ function sort_posts_by_category($posts) {
 		'uiux' => array(),
 		'libraries' => array(),
 		'learning' => array(),
-		'other' => array()
+		'other' => array(),
+		'responsive' => array()
 	);
 	
 	foreach ($posts as $post) {
@@ -352,7 +353,7 @@ function sort_posts_by_category($posts) {
 				break;
 
 			case 'Libraries':
-				array_push($sorted_posts['libaries'], $post);
+				array_push($sorted_posts['libraries'], $post);
 				break;
 
 			case 'Learning':
@@ -365,6 +366,10 @@ function sort_posts_by_category($posts) {
 
 			case 'SEO':
 				array_push($sorted_posts['seo'], $post);
+				break;
+
+			case 'Responsive':
+				array_push($sorted_posts['responsive'], $post);
 				break;
 
 			default:
@@ -415,6 +420,9 @@ function translate_section_title($id) {
 		case 'performance':
 			return 'Performance';
 
+		case 'responsive':
+			return 'Responsive';
+
 		default:
 			return 'Other';
 	}
@@ -459,6 +467,9 @@ function slugify_section_title($title) {
 		case 'UI/UX':
 			return 'uiux';
 		
+		case 'Responsive':
+			return 'responsive';
+
 		default:
 			return 'other';
 	}
