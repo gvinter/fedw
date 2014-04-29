@@ -3,7 +3,14 @@
 {{post|print_r}}
 </pre> #}
   <div class="row">
-    <h2 class="issue-title" itemprop="name"><span class="issue-num-date col-sm-2 col-xs-10">Issue {{post.issue_number|check_for_array}} <br/> <span itemprop="datePublished">{{ post.post_date|date('F j, Y') }}</span></span> <span class="issue-title col-sm-8 col-xs-10"><a href="{{site.url}}/issue/{{post.slug}}/" itemprop="url">{{post.post_title}}</a></span></h2>
+    <h2 class="issue-title" itemprop="name">
+      <span class="issue-num-date col-sm-2 col-xs-10">Issue {{post.issue_number|check_for_array}} <br/> 
+        <span itemprop="datePublished">{{ post.post_date|date('F j, Y') }}</span>
+      </span> 
+      <span class="issue-title col-sm-8 col-xs-10">
+        <a href="{{site.url}}/issue/{{post.slug}}/" itemprop="url">{{post.post_title}}</a>
+      </span>
+    </h2>
   </div>
 
   
