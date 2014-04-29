@@ -55,6 +55,9 @@
 			p
 				padding-top: 4px
 				padding-bottom: 5px
+				a
+					font-weight: bold
+					color: $gray-darker
 	
 	+mq($to: $screen-sm)
 		.author-hidden.commentary
@@ -158,6 +161,12 @@
 				article a.post_link
 					color: $learning
 
+			&.responsive
+				h3
+					border-color: $responsive
+					color: $responsive
+				article a.post_link
+					color: $responsive
 
 			// individual articles
 			article
