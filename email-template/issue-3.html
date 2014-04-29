@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+<head style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+<meta name="viewport" content="width=device-width" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+<title style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">Front-end Dev Weekly - Issue 3</title>
+</head>
+ 
+<body bgcolor="#FFFFFF" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;-webkit-font-smoothing: antialiased;-webkit-text-size-adjust: none;height: 100%;background: #fff;width: 100%;">
+
+<span class="preheader" style="display: none !important;visibility: hidden;opacity: 0;color: transparent;height: 0;width: 0;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">Browser caching, site compression, Schema actions, automatic style guides and more this week!</span>
+
+<!-- HEADER -->
+<table class="head-wrap container" style="margin: 0 auto;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 100%;background-color: #2980b9;display: block;max-width: 600px;clear: both;">
+	<tbody style="display: block;width: 100%;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+	<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;display: block;width: 100%;">
+		<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"></td>
+		<td class="header container" style="margin: 0 auto;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;display: block;max-width: 600px;clear: both;">
+				
+				<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;max-width: 600px;display: block;">
+				<table style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 100%;">
+					<tbody style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;display: block;width: 100%;">
+						<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;display: block;width: 100%;">
+							<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;text-align: center;width: 100%;display: block;">
+								<h4 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;,&quot;Helvetica Neue Light&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,&quot;Lucida Grande&quot;,sans-serif;line-height: 1.1;margin-bottom: 15px;color: #fff;font-weight: 400;font-size: 26px;">Front-end Dev Weekly</h4>
+							</td>
+							<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;text-align: center;width: 100%;display: block;">
+								<h5 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;,&quot;Helvetica Neue Light&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,&quot;Lucida Grande&quot;,sans-serif;line-height: 1.1;margin-bottom: 15px;color: #fff;font-weight: 600;font-size: 14px;text-transform: uppercase;">Issue #3 - April 29, 2014</h5>
+							</td>
+							<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;text-align: center;width: 100%;display: block;">
+								<a class="view-in-browser" href="http://frontenddevweekly.com/issue/load-build-respond-faster/" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #fff;text-decoration: none;text-align: right;text-transform: uppercase;display: block;font-size: 13px;font-weight: bold;">View in Browser</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</div>
+				
+		</td>
+		<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"></td>
+	</tr>
+	</tbody>
+</table>
+
+<table class="body-wrap" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 100%;">
+	<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+		<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"></td>
+		<td class="container" bgcolor="#FFFFFF" style="margin: 0 auto;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;display: block;max-width: 600px;clear: both;">
+
+			<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;max-width: 600px;display: block;">
+			<table style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 100%;">
+				<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+					<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+						
+						<h3 class="issue-title" style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;,&quot;Helvetica Neue Light&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,&quot;Lucida Grande&quot;,sans-serif;line-height: 1.1;margin-bottom: 15px;color: #2c3e50;font-weight: 500;font-size: 23px;">Load, build and respond faster</h3>
+						
+						<p class="commentary" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 16px;line-height: 1.3;">What'd I say about <a title="JS Chatter - You Have Ruin Javascript" href="http://codeofrob.com/entries/you-have-ruined-javascript.html" target="_blank" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">JS chatter</a> last week? :)</p>
+						<p class="commentary" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 16px;line-height: 1.3;">I got a bit style guide happy this week, but scaffolding techniques and libraries are required to building faster and more efficiently. This week is a bit of everything - load, build and respond faster.</p>
+
+						<p class="section-title performance-title" style="margin: 40px auto 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 14px;line-height: 1.6;text-align: center;padding-top: 3px;padding-bottom: 3px;max-width: 250px;text-transform: uppercase;border-bottom: 1px solid;border-color: #1abc9c;color: #1abc9c;">Performance</p>
+						
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">Leverage browser caching - it's easier than you think</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Run your website through a page speed tester like <a title="Google page Speed Insights" href="http://developers.google.com/speed/pagespeed/insights/" target="_blank" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">Google's</a> and you'll likely get a crappy score on "Leveraging browser caching". If you don't know exactly what this means, don't worry, here's your how-to guide on getting closer to a page speed test perfect score.</p>
+						<p class="performance-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://fortheloveofseo.com/blog/performance/leverage-browser-caching-how-to-add-expires-headers/" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #1abc9c;font-weight: 600;">http://fortheloveofseo.com/blog/performance/leverage-browser-caching-how-to-add-expires-headers/</a></p>
+
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">The standard performance practice of compressing your website</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">A browser can receive and decompress a compressed package of your site faster than it can just receive the uncompressed version. This quick how-to has instructions for quickly adding a snippet to your .htaccess file. Need <a title="Optimizing GZip" href="http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/" target="_blank" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">a deeper dive on gzipping vs. uncompressed</a>?</p>
+						<p class="performance-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://www.feedthebot.com/pagespeed/enable-compression.html" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #1abc9c;font-weight: 600;">http://www.feedthebot.com/pagespeed/enable-compression.html</a></p>
+
+						<p class="section-title seo-title" style="margin: 40px auto 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 14px;line-height: 1.6;text-align: center;padding-top: 3px;padding-bottom: 3px;max-width: 250px;text-transform: uppercase;border-bottom: 1px solid;border-color: #9b59b6;color: #9b59b6;">SEO</p>
+						
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">Schema actions added - adding verbs to your SEO-friendly content</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">I mentioned Schema.org last week - and it was oh-so-timely. They've added "<a title="Schema - Action" href="http://schema.org/Action" target="_blank" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">action</a>" vocabulary which adds a whole new dimension: not only can you define nouns, but now you can define verbs.</p>
+						<p class="seo-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://terraces.wordpress.com/2014/04/16/the-new-schema-org-actions-what-they-mean-for-personalisation-on-the-web/" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #9b59b6;font-weight: 600;">http://terraces.wordpress.com/2014/04/16/the-new-schema-org-actions-what-they-mean-for-personalisation-on-the-web/</a></p>
+
+						<p class="section-title learning-title" style="margin: 40px auto 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 14px;line-height: 1.6;text-align: center;padding-top: 3px;padding-bottom: 3px;max-width: 250px;text-transform: uppercase;border-bottom: 1px solid;border-color: #e74c3c;color: #e74c3c;">Learning</p>
+
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">Why would you build a wiki and not a style guide for projects? Do so easily with Sass 3.3 maps.</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Sass 3.3 has maps (aka. associative arrays) and a map-get() function for retrieving items in the map. The valuable use case: building a style guide for every project automatically can be as important as having a wiki for users. Need <a title="Anchoring Your Design Language in a Live Style Guide" href="http://uxmag.com/articles/anchoring-your-design-language-in-a-live-style-guide" target="_blank" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">more reasons</a> to do a style guide?</p>
+						<p class="learning-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://www.phase2technology.com/blog/exploring-maps-in-sass-3-3part-3-calling-variables-with-variables/" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #e74c3c;font-weight: 600;">http://www.phase2technology.com/blog/exploring-maps-in-sass-3-3part-3-calling-variables-with-variables/</a></p>
+
+						<p class="section-title libraries-title" style="margin: 40px auto 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 14px;line-height: 1.6;text-align: center;padding-top: 3px;padding-bottom: 3px;max-width: 250px;text-transform: uppercase;border-bottom: 1px solid;border-color: #16a085;color: #16a085;">Libraries</p>
+
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">Markdown in your stylesheet creates beautiful style guides</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Create a full style guide inline in your .css, .sass, or .less files. Best part - code your HTML in markdown inline as well and let the Hologram <a title="Guard plugin for the trulia/hologram gem" href="https://github.com/kmayer/guard-hologram" target="_blank" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">listener/guard gem</a> compile your stylesheets.</p>
+						<p class="libraries-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://trulia.github.io/hologram/" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #16a085;font-weight: 600;">http://trulia.github.io/hologram/</a></p>
+
+						<p class="section-title dev-tools-title" style="margin: 40px auto 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 14px;line-height: 1.6;text-align: center;padding-top: 3px;padding-bottom: 3px;max-width: 250px;text-transform: uppercase;border-bottom: 1px solid;border-color: #f39c12;color: #f39c12;">Dev Tools</p>
+
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">Opening doors in debugging with Chrome's Async Mode</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">By enabling Async mode in Chrome Dev Tools you unlock the whole call stack to be at your finger tips. Also, the last tip in the article should be the first on the topic of debugging in the console for debugging in the console: name functions, don't leave them as anonymous!</p>
+						<p class="dev-tools-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #f39c12;font-weight: 600;">http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/</a></p>						
+
+						<p class="section-title responsive-title" style="margin: 40px auto 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 14px;line-height: 1.6;text-align: center;padding-top: 3px;padding-bottom: 3px;max-width: 250px;text-transform: uppercase;border-bottom: 1px solid;border-color: #34495e;color: #34495e;">Responsive</p>
+
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">Go-to responsive image library revs to v2-alpha</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">I usually try to find articles that aren't necessarily mainstream, but this is a must-know. Picturefill v2, now in alpha, is the go-to library for responsive image handling.</p>
+						<p class="responsive-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://scottjehl.github.io/picturefill/" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #34495e;font-weight: 600;">http://scottjehl.github.io/picturefill/</a></p>
+
+						<p class="section-title uiux-title" style="margin: 40px auto 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 14px;line-height: 1.6;text-align: center;padding-top: 3px;padding-bottom: 3px;max-width: 250px;text-transform: uppercase;border-bottom: 1px solid;border-color: #d35400;color: #d35400;">UI/UX</p>
+
+						<p class="article-title" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: 600;font-size: 16px;line-height: 1.3;margin-top: 20px;">You probably shouldn't be using infinite scroll</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">Sure, Pinterest, Twitter, and Facebook are good use cases for infinite scroll - the user actions are minor and don't take you away from the page. But most sites should absolutely not be using it.</p>
+						<p class="uiux-link" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;"><a href="http://geeks.bizzabo.com/10-reasons-not-to-use-infinite-scroll-on-your-website" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #d35400;font-weight: 600;">http://geeks.bizzabo.com/10-reasons-not-to-use-infinite-scroll-on-your-website</a></p>
+
+												
+						<!-- social & contact -->
+						<table class="social" width="100%" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-top: 30px;background-color: #ebebeb;width: 100%;">
+							<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+								<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+									<table align="left" class="column" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 280px;float: left;min-width: 279px;">
+										<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+											<td style="margin: 0;padding: 15px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">				
+												<h5 class="" style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;,&quot;Helvetica Neue Light&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,&quot;Lucida Grande&quot;,sans-serif;line-height: 1.1;margin-bottom: 15px;color: #2c3e50;font-weight: 900;font-size: 17px;">Share this issue on:</h5>
+												<p class="" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">
+													<a href="https://twitter.com/home?status=http://frontenddevweekly.com/issue/load-build-respond-faster/" class="soc-btn tw" style="margin: 0;padding: 3px 7px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #fff;font-size: 12px;margin-bottom: 10px;text-decoration: none;font-weight: bold;display: block;text-align: center;background-color: #1daced;">Twitter</a> 
+													<a href="https://plus.google.com/share?url=http://frontenddevweekly.com/issue/load-build-respond-faster/" class="soc-btn gp" style="margin: 0;padding: 3px 7px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #fff;font-size: 12px;margin-bottom: 10px;text-decoration: none;font-weight: bold;display: block;text-align: center;background-color: #db4a39;">Google+</a>
+													<a href="https://www.facebook.com/sharer/sharer.php?u=http://frontenddevweekly.com/issue/load-build-respond-faster/" class="soc-btn fb" style="margin: 0;padding: 3px 7px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #fff;font-size: 12px;margin-bottom: 10px;text-decoration: none;font-weight: bold;display: block;text-align: center;background-color: #3b5998;">Facebook</a> 
+												</p>
+											</td>
+										</tr>
+									</table>
+									<table align="left" class="column" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 280px;float: left;min-width: 279px;">
+										<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+											<td style="margin: 0;padding: 15px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+												<h5 style="margin: 0;padding: 0;font-family: &quot;HelveticaNeue-Light&quot;,&quot;Helvetica Neue Light&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,&quot;Lucida Grande&quot;,sans-serif;line-height: 1.1;margin-bottom: 15px;color: #2c3e50;font-weight: 900;font-size: 17px;">Questions, Comments Concerns?</h5>
+												<strong style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"><a href="emailto:galen.vinter@gmail.com" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">galen.vinter@gmail.com</a></strong>
+												<br style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+												<strong style="line-height: 40px;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"><a href="http://twitter.com/gvinter" style="color: #1daced;margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">@gvinter</a></strong>
+												<!-- <h5 class="">Contact Info:</h5>
+												<p>Phone: <strong>408.341.0600</strong><br/>
+                Email: <strong><a href="emailto:hseldon@trantor.com">galen.vinter@gmail.com</a></strong></p> -->
+											</td>
+										</tr>
+									</table>
+									<span class="clear" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;display: block;clear: both;"></span>	
+								</td>
+							</tr>
+						</table>
+						
+					</td>
+				</tr>
+			</table>
+			</div><!-- /content -->
+									
+		</td>
+		<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"></td>
+	</tr>
+</table><!-- /BODY -->
+
+<!-- FOOTER -->
+<table class="footer-wrap" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 100%;clear: both;">
+	<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+		<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"></td>
+		<td class="container" style="margin: 0 auto;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;display: block;max-width: 600px;clear: both;">
+			
+				<!-- content -->
+				<div class="content" style="margin: 0 auto;padding: 15px;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;max-width: 600px;display: block;">
+				<table style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;width: 100%;">
+				<tr style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+					<td align="center" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+						<p class="explanation" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 13px;line-height: 16px;color: #555;">You are receiving this email because you opted in at our website, <a href="http://frontenddevweekly.com" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #555;text-decoration: none;">frontenddevweekly.com</a>.</p>
+						<p style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 14px;line-height: 1.6;">
+							<a href="*|FORWARD|*" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">Forward to a friend</a> |
+							<a href="*|UPDATE_PROFILE|*" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;">Update Your Profile</a> |
+							<a href="*|UNSUB|*" class="unsub" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;color: #2980b9;"><unsubscribe style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">Unsubscribe</unsubscribe></a>
+						</p>
+					</td>
+					<td align="center" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;">
+						<p class="explanation" style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;margin-bottom: 10px;font-weight: normal;font-size: 13px;line-height: 16px;color: #555;">The mailing address for Front-end Dev Weekly is: 11 Phillips St. #2, Boston, MA 02114</p>
+					</td>
+				</tr>
+			</table>
+				</div><!-- /content -->
+				
+		</td>
+		<td style="margin: 0;padding: 0;font-family: &quot;Helvetica Neue&quot;,&quot;Helvetica&quot;,Helvetica,Arial,sans-serif;"></td>
+	</tr>
+</table><!-- /FOOTER -->
+<style>@media print{ #_t { background-image: url('https://i8kumkyf.emltrk.com/i8kumkyf?p&d=*|EMAIL|*');}} div.OutlookMessageHeader {background-image:url('https://i8kumkyf.emltrk.com/i8kumkyf?f&d=*|EMAIL|*')} table.moz-email-headers-table {background-image:url('https://i8kumkyf.emltrk.com/i8kumkyf?f&d=*|EMAIL|*')} blockquote #_t {background-image:url('https://i8kumkyf.emltrk.com/i8kumkyf?f&d=*|EMAIL|*')} #MailContainerBody #_t {background-image:url('https://i8kumkyf.emltrk.com/i8kumkyf?f&d=*|EMAIL|*')}</style><div id="_t"></div>
+<img src="https://i8kumkyf.emltrk.com/i8kumkyf?d=*|EMAIL|*" width="1" height="1" border="0" />
+</body>
+</html>
