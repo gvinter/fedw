@@ -80,10 +80,19 @@ h4
 			padding-left: 32px
 			padding-right: 32px
 			margin-top: 10px
+			vertical-align: top
+		+mq($to: $screen-xs)
+			input[type="email"]
+				margin-top: 10px
 		+mq($from: $screen-xs)
+			input[type="text"]
+				width: 180px
+				display: inline
+				margin-bottom: 10px
 			input[type="email"]
 				width: 250px
 				display: inline
+				margin: 0 5px 10px
 			.btn-success
 				margin-top: 0
 
