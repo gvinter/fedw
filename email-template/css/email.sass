@@ -62,6 +62,14 @@ body
   height: 100%
   background: $white
 
+.preheader
+  display: none !important
+  visibility: hidden
+  opacity: 0
+  color: transparent
+  height: 0
+  width: 0
+
 // ELEMENTS
 
 a
@@ -158,6 +166,9 @@ table.head-wrap
     font-size: 14px
     font-weight: 600
 
+.inner-header
+  display: block
+
 // BODY
 
 table
@@ -241,6 +252,9 @@ h3.issue-title
   font-weight: 600
   text-transform: uppercase
   border-bottom: 1px solid
+
+.post-link a
+  text-transform: uppercase
 
 .news-title
   border-color: $news
@@ -419,6 +433,7 @@ ul
 
 .social
   margin-top: 30px
+  width: 100%
   .column
     width: 280px
     min-width: 279px
@@ -444,3 +459,4 @@ ul
     float: none!important
   table.social div[class="column"]
     width: auto!important
+
