@@ -1,15 +1,13 @@
 ## would love to know what makes Front-end Dev Weekly valuable to you
 
-Hi _,
+Hey _,
 
 Thank you for subscribing to Front-end Dev Weekly. I noticed that you ...
 
 I'm trying to make Front-end Dev Weekly better for you and all other subscribers. Can you help me out by answering a few questions?
 
 1. What about Front-end Dev Weekly do you find MOST valuable for becoming a better developer?
-
 2. What about Front-end Dev Weekly do you find LEAST valuable for becoming a better developer?
-
 3. What kinds of content would you like to see more of?
 
 Thanks so much for your time and for helping me make Front-end Dev Weekly better for developers everywhere.
