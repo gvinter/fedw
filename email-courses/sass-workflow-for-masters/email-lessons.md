@@ -4,6 +4,10 @@
 
 ## An expert Sass workflow isn't just about using variables for colors and mixins for commonly used styles. It's so much more!
 
+### Intro
+
+Becoming a top notch Sass 
+
 ### Lesson 1 - Producing Quality Sass
 
 Has nothing to do with:
